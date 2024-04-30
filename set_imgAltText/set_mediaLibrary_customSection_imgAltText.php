@@ -113,7 +113,7 @@ function set_mediaLibrary_customSection_imgAltText()
 		</div>
 
 		<!--
-		<script src=/wp-content/themes/PixSquare/set_imgAltText/set_imgAltText.js></script>
+		<script src=/wp-content/themes/pixsquare/set_imgAltText/set_imgAltText.js></script>
 		-->
 		<script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs'></script>
 		<script src='https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet'></script>

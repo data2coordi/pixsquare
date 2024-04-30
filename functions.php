@@ -1,11 +1,11 @@
 <?php
 
 /**
- * PixSquare functions and definitions
+ * pixsquare functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package PixSquare
+ * @package pixsquare
  */
 
 if (!defined('_S_VERSION')) {
@@ -60,8 +60,8 @@ add_filter( 'the_content', 'add_index' );
  */
 //nonceの導入
 function enqueue_imgAltText_script() {
-    wp_enqueue_script('PixSquare_y_imgAltText-script', get_template_directory_uri() . '/set_imgAltText/set_imgAltText.js', array('jquery'), '', true);
-    wp_localize_script('PixSquare_y_imgAltText-script', 'wpData', array(
+    wp_enqueue_script('pixsquare_y_imgAltText-script', get_template_directory_uri() . '/set_imgAltText/set_imgAltText.js', array('jquery'), '', true);
+    wp_localize_script('pixsquare_y_imgAltText-script', 'wpData', array(
         'url_dbUpdate' => get_template_directory_uri() .  '/set_imgAltText/regist_tbl_imgAltText.php',
         'nonce'   => wp_create_nonce('my-custom-nonce'),
     ));
@@ -350,15 +350,15 @@ add_action('admin_menu', 'custom_menu_page');
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function PixSquare_setup()
+function pixsquare_setup()
 {
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on PixSquare, use a find and replace
-		* to change 'PixSquare' to the name of your theme in all the template files.
+		* If you're building a theme based on pixsquare, use a find and replace
+		* to change 'pixsquare' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain('PixSquare', get_template_directory() . '/languages');
+	load_theme_textdomain('pixsquare', get_template_directory() . '/languages');
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
@@ -381,7 +381,7 @@ function PixSquare_setup()
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__('Primary', 'PixSquare'),
+			'menu-1' => esc_html__('Primary', 'pixsquare'),
 		)
 	);
 
@@ -406,7 +406,7 @@ function PixSquare_setup()
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'PixSquare_custom_background_args',
+			'pixsquare_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -432,7 +432,7 @@ function PixSquare_setup()
 		)
 	);
 }
-add_action('after_setup_theme', 'PixSquare_setup');
+add_action('after_setup_theme', 'pixsquare_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -441,24 +441,24 @@ add_action('after_setup_theme', 'PixSquare_setup');
  *
  * @global int $content_width
  */
-function PixSquare_content_width()
+function pixsquare_content_width()
 {
-	$GLOBALS['content_width'] = apply_filters('PixSquare_content_width', 640);
+	$GLOBALS['content_width'] = apply_filters('pixsquare_content_width', 640);
 }
-add_action('after_setup_theme', 'PixSquare_content_width', 0);
+add_action('after_setup_theme', 'pixsquare_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function PixSquare_widgets_init()
+function pixsquare_widgets_init()
 {
 	register_sidebar(
 		array(
-			'name'          => esc_html__('Sidebar', 'PixSquare'),
+			'name'          => esc_html__('Sidebar', 'pixsquare'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__('Add widgets here.', 'PixSquare'),
+			'description'   => esc_html__('Add widgets here.', 'pixsquare'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -466,7 +466,7 @@ function PixSquare_widgets_init()
 		)
 	);
 }
-add_action('widgets_init', 'PixSquare_widgets_init');
+add_action('widgets_init', 'pixsquare_widgets_init');
 
 
 
@@ -475,49 +475,49 @@ add_action('widgets_init', 'PixSquare_widgets_init');
 /**
  * Enqueue scripts and styles.
  */
-function PixSquare_scripts()
+function pixsquare_scripts()
 {
 
 	//add y_add_s
 	/*
-	wp_enqueue_style( 'PixSquare-y_app_style', get_template_directory_uri() . '/css/app.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_import_style', get_template_directory_uri() . '/css/import.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_index2_style', get_template_directory_uri() . '/css/index2.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_lightbox_style', get_template_directory_uri() . '/css/lightbox.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_links_style', get_template_directory_uri() . '/css/links.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_mail_style', get_template_directory_uri() . '/css/mail.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_private_style', get_template_directory_uri() . '/css/private.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_profile_style', get_template_directory_uri() . '/css/profile.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_typography_style', get_template_directory_uri() . '/css/typography.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_utility_style', get_template_directory_uri() . '/css/utility.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_workflow_style', get_template_directory_uri() . '/css/workflow.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_works_style', get_template_directory_uri() . '/css/works.css', array(), false );
-	wp_enqueue_style( 'PixSquare-y_yurika_top_style', get_template_directory_uri() . '/css/yurika_top.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_app_style', get_template_directory_uri() . '/css/app.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_import_style', get_template_directory_uri() . '/css/import.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_index2_style', get_template_directory_uri() . '/css/index2.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_lightbox_style', get_template_directory_uri() . '/css/lightbox.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_links_style', get_template_directory_uri() . '/css/links.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_mail_style', get_template_directory_uri() . '/css/mail.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_private_style', get_template_directory_uri() . '/css/private.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_profile_style', get_template_directory_uri() . '/css/profile.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_typography_style', get_template_directory_uri() . '/css/typography.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_utility_style', get_template_directory_uri() . '/css/utility.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_workflow_style', get_template_directory_uri() . '/css/workflow.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_works_style', get_template_directory_uri() . '/css/works.css', array(), false );
+	wp_enqueue_style( 'pixsquare-y_yurika_top_style', get_template_directory_uri() . '/css/yurika_top.css', array(), false );
 	 */
-	wp_enqueue_style('PixSquare-y_style', get_template_directory_uri() . '/css/PixSquare.css', array(), false);
-	wp_enqueue_style('PixSquare-y_style_gallery', get_template_directory_uri() . '/css/PixSquare_gallery.css', array(), false);
+	wp_enqueue_style('pixsquare-y_style', get_template_directory_uri() . '/css/pixsquare.css', array(), false);
+	wp_enqueue_style('pixsquare-y_style_gallery', get_template_directory_uri() . '/css/pixsquare_gallery.css', array(), false);
 
 
-	wp_enqueue_style('PixSquare-y_style_font_awesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), false);
-	wp_enqueue_script( 'PixSquare-y_font_awesome',' https://use.fontawesome.com/releases/v5.15.4/js/all.js', array(), false, true );
+	wp_enqueue_style('pixsquare-y_style_font_awesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), false);
+	wp_enqueue_script( 'pixsquare-y_font_awesome',' https://use.fontawesome.com/releases/v5.15.4/js/all.js', array(), false, true );
 	//add y_add_e
 
-	wp_enqueue_style('PixSquare-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('PixSquare-style', 'rtl', 'replace');
+	wp_enqueue_style('pixsquare-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('pixsquare-style', 'rtl', 'replace');
 
 
 	// y add_share_s
-	// wp_enqueue_style( 'PixSquare-y_share_style', get_template_directory_uri() . '/share/css/share.css', array(), false );
-	//wp_enqueue_style( 'PixSquare-y_share_style', get_template_directory_uri() . '/share/resource/lightbox.css', array(), false );
+	// wp_enqueue_style( 'pixsquare-y_share_style', get_template_directory_uri() . '/share/css/share.css', array(), false );
+	//wp_enqueue_style( 'pixsquare-y_share_style', get_template_directory_uri() . '/share/resource/lightbox.css', array(), false );
 
-	//wp_enqueue_script( 'PixSquare-y_share_default', get_template_directory_uri() . '/share/js/default.js', array(), false, true );
-	//wp_enqueue_script( 'PixSquare-y_share_jquery', get_template_directory_uri() . '/share/js/jquery.js', array(), false, true );
-	//wp_enqueue_script( 'PixSquare-y_share_lightbox_plus', get_template_directory_uri() . '/share/resource/lightbox_plus.js', array(), false, true );
-	//wp_enqueue_script( 'PixSquare-y_share_scroll', get_template_directory_uri() . '/share/js/scroll.js', array(), false, true );
+	//wp_enqueue_script( 'pixsquare-y_share_default', get_template_directory_uri() . '/share/js/default.js', array(), false, true );
+	//wp_enqueue_script( 'pixsquare-y_share_jquery', get_template_directory_uri() . '/share/js/jquery.js', array(), false, true );
+	//wp_enqueue_script( 'pixsquare-y_share_lightbox_plus', get_template_directory_uri() . '/share/resource/lightbox_plus.js', array(), false, true );
+	//wp_enqueue_script( 'pixsquare-y_share_scroll', get_template_directory_uri() . '/share/js/scroll.js', array(), false, true );
 
 	//add for lightbox_s
-	wp_enqueue_style( 'PixSquare-y_lightbox_style', get_template_directory_uri() . '/lightbox/css/lightbox.min.css', array(), false );
-	wp_enqueue_script('PixSquare-y_lightbox_js',    get_template_directory_uri() . '/lightbox/js/lightbox-plus-jquery.min.js' , array(), false, false);
+	wp_enqueue_style( 'pixsquare-y_lightbox_style', get_template_directory_uri() . '/lightbox/css/lightbox.min.css', array(), false );
+	wp_enqueue_script('pixsquare-y_lightbox_js',    get_template_directory_uri() . '/lightbox/js/lightbox-plus-jquery.min.js' , array(), false, false);
 	//add for lightbox_e
 
 
@@ -526,20 +526,20 @@ function PixSquare_scripts()
 
 
 	// for tensorflow.js
-	//wp_enqueue_script('PixSquare-y_tensorflow',           'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs', array(), false, false);
-	//wp_enqueue_script('PixSquare-y_tensorflow_mobilenet', 'https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet', array(), false, false);
-	//wp_enqueue_script('PixSquare-y_tensorflow_coco-ssd',  'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd', array(), false, false);
+	//wp_enqueue_script('pixsquare-y_tensorflow',           'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs', array(), false, false);
+	//wp_enqueue_script('pixsquare-y_tensorflow_mobilenet', 'https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet', array(), false, false);
+	//wp_enqueue_script('pixsquare-y_tensorflow_coco-ssd',  'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd', array(), false, false);
 	// y add_share_e
 
 
 
-	wp_enqueue_script('PixSquare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script('pixsquare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 }
-add_action('wp_enqueue_scripts', 'PixSquare_scripts');
+add_action('wp_enqueue_scripts', 'pixsquare_scripts');
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
