@@ -1,0 +1,85 @@
+syntax region txtType start=+////+ end=+$+
+syntax region txtdel start=+--+ end=+$+
+syntax region txtTitle start=+0##+ end=+$+
+syntax region txtvisual start=+1##+ end=+$+
+syntax region txtvisual start=+2##+ end=+$+
+syntax region txtvisual start=+##+ end=+$+
+syntax region txtvisual start=+###+ end=+$+
+syntax region txtvisual start=+####+ end=+$+
+syntax region txtIncSearch start=+#####+ end=+$+
+syntax region txtType start=+######+ end=+$+
+syntax region txtvisual start=+xxxx+ end=+$+
+syntax region txtDiffText start=+??+ end=+$+
+syntax region txtDiffText start=+●+ end=+$+
+syntax region txtDiffText start=+■+ end=+$+
+syntax region txtWildMenu start=+▼+ end=+$+
+
+highlight link txtTitle Statusline
+highlight link txtType VisualNOS 
+highlight link txtdel Conceal
+highlight link txtErrorMsg ErrorMsg
+highlight link txtIncSearch IncSearch
+highlight link txtModeMsg ModeMsg
+highlight link txtStatusLine StatusLine
+highlight link txtvisual Question 
+highlight link txtDiffText DiffText 
+highlight link txtWildMenu WildMenu 
+highlight link txtExe SpellCap 
+
+syntax region txtType start=+////+ end=+$+
+syntax region txtdel start=+--+ end=+$+
+syntax region txtTitle start=+0##+ end=+$+
+syntax region txtvisual start=+1##+ end=+$+
+syntax region txtvisual start=+2##+ end=+$+
+syntax region txtvisual start=+##+ end=+$+
+syntax region txtvisual start=+###+ end=+$+
+syntax region txtvisual start=+####+ end=+$+
+syntax region txtIncSearch start=+#####+ end=+$+
+syntax region txtType start=+######+ end=+$+
+syntax region txtvisual start=+xxxx+ end=+$+
+syntax region txtDiffText start=+??+ end=+$+
+syntax region txtDiffText start=+●+ end=+$+
+syntax region txtDiffText start=+■+ end=+$+
+syntax region txtWildMenu start=+▼+ end=+$+
+
+highlight link txtTitle Statusline
+highlight link txtType VisualNOS 
+highlight link txtdel Conceal
+highlight link txtErrorMsg ErrorMsg
+highlight link txtIncSearch IncSearch
+highlight link txtModeMsg ModeMsg
+highlight link txtStatusLine StatusLine
+highlight link txtvisual Question 
+highlight link txtDiffText DiffText 
+highlight link txtWildMenu WildMenu 
+highlight link txtExe SpellCap 
+
+syntax region txtType start=+////+ end=+$+
+syntax region txtdel start=+--+ end=+$+
+syntax region txtTitle start=+0##+ end=+$+
+syntax region txtvisual start=+1##+ end=+$+
+syntax region txtvisual start=+2##+ end=+$+
+syntax region txtvisual start=+##+ end=+$+
+syntax region txtvisual start=+###+ end=+$+
+syntax region txtvisual start=+####+ end=+$+
+syntax region txtIncSearch start=+#####+ end=+$+
+syntax region txtType start=+######+ end=+$+
+syntax region txtvisual start=+xxxx+ end=+$+
+syntax region txtDiffText start=+??+ end=+$+
+syntax region txtDiffText start=+●+ end=+$+
+syntax region txtDiffText start=+■+ end=+$+
+syntax region txtWildMenu start=+▼+ end=+$+
+
+highlight link txtTitle Statusline
+highlight link txtType VisualNOS 
+highlight link txtdel Conceal
+highlight link txtErrorMsg ErrorMsg
+highlight link txtIncSearch IncSearch
+highlight link txtModeMsg ModeMsg
+highlight link txtStatusLine StatusLine
+highlight link txtvisual Question 
+highlight link txtDiffText DiffText 
+highlight link txtWildMenu WildMenu 
+highlight link txtExe SpellCap 
+
+
