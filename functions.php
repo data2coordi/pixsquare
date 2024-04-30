@@ -88,7 +88,7 @@ include(get_template_directory() . '/set_imgAltText/set_mediaLibrary_customSecti
 //////////////////////////////////////////////////////////
 function breadcrumb()
 {
-	$home = '<li><a href="' . get_bloginfo('url') . '" >HOME</a></li>';
+	$home = '<li><a href="' . home_url('url') . '" >HOME</a></li>';
 
 	echo '<ul class="create_bread">';
 	if (is_front_page()) {
