@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package PixSquare
+ * @package pixsquare
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function PixSquare_jetpack_setup() {
+function pixsquare_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'PixSquare_infinite_scroll_render',
+			'render'    => 'pixsquare_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function PixSquare_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'PixSquare-style',
+				'stylesheet' => 'pixsquare-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,13 +48,13 @@ function PixSquare_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'PixSquare_jetpack_setup' );
+add_action( 'after_setup_theme', 'pixsquare_jetpack_setup' );
 
-if ( ! function_exists( 'PixSquare_infinite_scroll_render' ) ) :
+if ( ! function_exists( 'pixsquare_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function PixSquare_infinite_scroll_render() {
+	function pixsquare_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
 			if ( is_search() ) :

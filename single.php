@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package PixSquare
+ * @package pixsquare
  */
 
 get_header();
@@ -43,8 +43,8 @@ if (!empty($matches[0])) :
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'PixSquare' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'PixSquare' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'pixsquare' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'pixsquare' ) . '</span> <span class="nav-title">%title</span>',
 				)
 			);
 

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package PixSquare
+ * @package pixsquare
  */
 
 ?>
@@ -38,7 +38,7 @@
 <body <?php body_class('createpc createp1 createp2 createp3 createp4 createp5'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'PixSquare' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'pixsquare' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -59,15 +59,15 @@
 			endif;
 
 
-			$PixSquare_description = get_bloginfo( 'description', 'display' );
-			if ( $PixSquare_description || is_customize_preview() ) :
+			$pixsquare_description = get_bloginfo( 'description', 'display' );
+			if ( $pixsquare_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $PixSquare_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><?php echo $pixsquare_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'PixSquare' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pixsquare' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
