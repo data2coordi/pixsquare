@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Pcolor
+ * @package PixSquare
  */
 
 ?>
@@ -21,12 +21,12 @@
 			<span class="sep">  </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pcolor' ), 'Create', '<a class="create_footer" href="https://color.toshidayurika.com/">Yurika Toshida at Aurora Lab</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'PixSquare' ), 'Create', '<a class="create_footer" href="https://color.toshidayurika.com/">Yurika Toshida at Aurora Lab</a>' );
 				?>
-			<a  class="create_footer" href="<?php echo esc_url( __( 'https://wordpress.org/', 'pcolor' ) ); ?>">
+			<a  class="create_footer" href="<?php echo esc_url( __( 'https://wordpress.org/', 'PixSquare' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pcolor' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'PixSquare' ), 'WordPress' );
 				?>
 			</a>
 			<script>

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pcolor
+ * @package PixSquare
  */
 
 get_header();
@@ -40,7 +40,7 @@ get_header();
 							sprintf(
 								wp_kses(
 									/* translators: %s: Name of current post. Only visible to screen readers */
-									__( 'Edit <span class="screen-reader-text">%s</span>', 'pcolor' ),
+									__( 'Edit <span class="screen-reader-text">%s</span>', 'PixSquare' ),
 									array(
 										'span' => array(
 											'class' => array(),
