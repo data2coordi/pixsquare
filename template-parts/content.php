@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pcolor
+ * @package PixSquare
  */
 
 ?>
@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				pcolor_posted_on();
-				pcolor_posted_by();
+				PixSquare_posted_on();
+				PixSquare_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php pcolor_post_thumbnail(); ?>
+	<?php PixSquare_post_thumbnail(); ?>
 
 	<div class="entry-content">
 
@@ -40,7 +40,7 @@
 			sprintf(
 				wp_kses(
 					// translators: %s: Name of current post. Only visible to screen readers 
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'pcolor' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'PixSquare' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -53,7 +53,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'pcolor' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'PixSquare' ),
 				'after'  => '</div>',
 			)
 		);
@@ -61,6 +61,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php pcolor_entry_footer(); ?>
+		<?php PixSquare_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pcolor
+ * @package PixSquare
  */
 
 ?>
@@ -16,7 +16,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php pcolor_post_thumbnail(); ?>
+	<?php PixSquare_post_thumbnail(); ?>
 
 	<div class="entry-content"> 
 		<?php
@@ -77,7 +77,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'pcolor' ),
+						__( 'Edit <span class="screen-reader-text">%s</span>', 'PixSquare' ),
 						array(
 							'span' => array(
 								'class' => array(),

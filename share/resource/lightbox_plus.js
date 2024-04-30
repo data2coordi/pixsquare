@@ -1029,14 +1029,14 @@ Lightbox.prototype = {
 };
 Spica.Event.run(function() { 
   new Lightbox({
-    loadingimg:'/wp-content/themes/pcolor/share/resource/loading.gif',
-    expandimg:'/wp-content/themes/pcolor/share/resource/expand.gif',
-    shrinkimg:'/wp-content/themes/pcolor/share/resource/shrink.gif',
-    blankimg:'/wp-content/themes/pcolor/share/resource/blank.gif',
-    previmg:'/wp-content/themes/pcolor/share/resource/prev.gif',
-    nextimg:'/wp-content/themes/pcolor/share/resource/next.gif',
-    closeimg:'/wp-content/themes/pcolor/share/resource/close.gif',
-    effectimg:'/wp-content/themes/pcolor/share/resource/zzoop.gif',
+    loadingimg:'/wp-content/themes/PixSquare/share/resource/loading.gif',
+    expandimg:'/wp-content/themes/PixSquare/share/resource/expand.gif',
+    shrinkimg:'/wp-content/themes/PixSquare/share/resource/shrink.gif',
+    blankimg:'/wp-content/themes/PixSquare/share/resource/blank.gif',
+    previmg:'/wp-content/themes/PixSquare/share/resource/prev.gif',
+    nextimg:'/wp-content/themes/PixSquare/share/resource/next.gif',
+    closeimg:'/wp-content/themes/PixSquare/share/resource/close.gif',
+    effectimg:'/wp-content/themes/PixSquare/share/resource/zzoop.gif',
     effectpos:{x:-40,y:-20},
     effectclass:'effectable',
     resizable:true,

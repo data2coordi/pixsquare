@@ -21,78 +21,91 @@
     
 }*/
 
-.post-thumbnail{
-    text-align: center;
+.post-thumbnail {
+	text-align: center;
 }
 
-#header ul#gNavi li a:hover{
+#header ul#gNavi li a:hover {
 	text-decoration: underline;
 }
 
-ul#gNavi{
+ul#gNavi {
 	width: 960px;
 	text-align: center;
 	margin: 0 auto;
-}*/
-
-ul#gNavi li{
-	display: block;
-	margin:30 30px;
 }
-ul#gNavi li a:hover{
+
+*/ ul#gNavi li {
+	display: block;
+	margin: 30 30px;
+}
+
+ul#gNavi li a:hover {
 	text-decoration: underline;
 }
-ul#gNavi li.firstItem{
-    width: 100%;
+
+ul#gNavi li.firstItem {
+	width: 100%;
 }
 
 #layer_base {
-position: relative; /* 基準となる位置 */
-width:960px; /* 基準の幅 */
-height: 68px; /* 基準の高さ */
-/*画像を中央寄せ*/
-margin-left: auto;
-margin-right: auto;
+	position: relative;
+	/* 基準となる位置 */
+	width: 960px;
+	/* 基準の幅 */
+	height: 68px;
+	/* 基準の高さ */
+	/*画像を中央寄せ*/
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #layer_1 {
-	position: absolute; /* 基準からの相対位置 */
-	top: 23px; /* 上からの位置 */
-	left: 50px; /* 左からの位置 */
-	font-family:"Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	position: absolute;
+	/* 基準からの相対位置 */
+	top: 23px;
+	/* 上からの位置 */
+	left: 50px;
+	/* 左からの位置 */
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	color: #FFF;
 }
-	
-.img_box {
-    position:relative;
-    display:block;
-    margin:0;
-    padding:0;
-}
-.img_box img {
-    z-index:0;
-    margin:0;
-    padding:0;
-}
-.img_box a {
-    color:white;
-}
-.img_box img:hover {
-    filter:alpha(opacity=50);
-    opacity: 0.5;
-}
-.img_comment {
-    position:absolute;
-    top:0px;
-    left:0px;
-    z-index:1;
-    padding:10px;
-    margin:0;
-    text-shadow:3px 3px 3px #000;
-}*/
 
+.img_box {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.img_box img {
+	z-index: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.img_box a {
+	color: white;
+}
+
+.img_box img:hover {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.img_comment {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	padding: 10px;
+	margin: 0;
+	text-shadow: 3px 3px 3px #000;
+}
+
+*/
 /*#mainContents{
 	width: 960px;
 	margin: 0 auto;
@@ -108,46 +121,40 @@ margin-right: auto;
 }
 #pagetop a {
 	/* color: #FFF;		文字色 */
-	/* font-size: 10px;	文字サイズ */
-	/* background-color: #666;	背景色 */
-	text-decoration: none;
-	text-align: center;
-	/* width: 12em;	ボックス幅 */
-	float: right;
-	/* letter-spacing: 0.1em;	文字間隔を少し広めにとる設定。 */
+/* font-size: 10px;	文字サイズ */
+/* background-color: #666;	背景色 */
+text-decoration: none;
+text-align: center;
+/* width: 12em;	ボックス幅 */
+float: right;
+/* letter-spacing: 0.1em;	文字間隔を少し広めにとる設定。 */
 }
+
 /* マウスオン時 */
 #pagetop a:hover {
 	/* background-color: #999;	背景色 */
 	/* color: #FFF;			文字色 */
 }
 
-#footer{
+#footer {
 	background: #999;
-	width:100%!important;
-    height:30px;
-    position:fixed;        
-    bottom: 0;
+	width: 100% !important;
+	height: 30px;
+	position: fixed;
+	bottom: 0;
 }
 
-#footer p#copyright{
+#footer p#copyright {
 	text-align: center;
-    color: #fff;
-    width:100%;
-    font-size:12px;
-	font-family:"lucida grande", tahoma, verdana, arial, sans-serif!important;
+	color: #fff;
+	width: 100%;
+	font-size: 12px;
+	font-family: "lucida grande", tahoma, verdana, arial, sans-serif !important;
 }
+
 ---------------------------------------------
-
-
-
-
-
-
-
-
 /*!
-Theme Name: Pcolor
+Theme Name: PixSquare
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -157,13 +164,13 @@ Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: pcolor
+Text Domain: PixSquare
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
-Pcolor is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+PixSquare is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -227,7 +234,7 @@ html {
  */
 body {
 	margin: 0;
-	}
+}
 
 /**
  * Render the `main` element consistently in IE.
@@ -567,17 +574,18 @@ p {
 	font-size: 14px;
 	margin-left: auto;
 	margin-right: auto;
-	line-height:2.2;
+	line-height: 2.2;
 }
 
 .wp-block-image {
 	text-align: center;
 }
 
-.columns-default .has-nested-images .is-cropped .is-layout-flex .wp-block-gallery .wp-block-gallery-1 .wp-block-gallery-is-layout-flex{
+.columns-default .has-nested-images .is-cropped .is-layout-flex .wp-block-gallery .wp-block-gallery-1 .wp-block-gallery-is-layout-flex {
 	display: flex;
 }
-.wp-image-222 .wp-image-224 .wp-image-223{
+
+.wp-image-222 .wp-image-224 .wp-image-223 {
 	width: 300px;
 }
 
@@ -655,8 +663,8 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -833,8 +841,8 @@ textarea {
 	top: 0;
 }
 
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
+.main-navigation ul ul li:hover>ul,
+.main-navigation ul ul li.focus>ul {
 	display: block;
 	left: auto;
 }
@@ -843,8 +851,8 @@ textarea {
 	width: 200px;
 }
 
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
+.main-navigation ul li:hover>ul,
+.main-navigation ul li.focus>ul {
 	left: auto;
 }
 
@@ -875,10 +883,8 @@ textarea {
 }
 
 .site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
-.post-navigation {
+.site-main .posts-navigation,
+.site-main .post-navigation {
 	margin: 0 0 1.5em;
 }
 
