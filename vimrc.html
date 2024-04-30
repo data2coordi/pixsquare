@@ -1,0 +1,171 @@
+"## plugin
+" file  explorer
+nnoremap <C-p> :<C-u>FZF<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
+" NERDTree不具合対応
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+"## window keyMap
+nnoremap <space> <Nop>
+nnoremap <space>j <C-w>j "現在のボジション移動
+nnoremap <space>k <C-w>k "現在のボジション移動
+nnoremap <space>l <C-w>l "現在のボジション移動
+nnoremap <space>h <C-w>h "現在のボジション移動
+nnoremap <space>J <C-w>J "現在のwindowの位置変更
+nnoremap <space>K <C-w>K "現在のwindowの位置変更
+nnoremap <space>L <C-w>L "現在のwindowの位置変更
+nnoremap <space>H <C-w>H "現在のwindowの位置変更
+nnoremap <space>x <C-w>x<C-w>j "1つ下のwindowと入れ替え
+nnoremap <space>r <C-w>r "回転
+nnoremap <space>R <C-w>R "逆回転
+"nnoremap <space>t <C-w>t nnoremap <space>b <C-w>b
+nnoremap <space>u <C-w>_  "現在windowを縦方向に最大化
+nnoremap <space>o <C-w>\| "現在windowを横方向に最大化
+nnoremap <space>e <C-w>=  "windowサイズ均等
+nnoremap <space>t :vim "##" %<ESC>:copen<ESC><C-w>L10<C-w><
+" nnoremap <space>t :copen<ESC><C-w>L20<C-w><
+" nnoremap <space>z :vim "##" %<ESC>
+
+
+"## 基本設定
+set number
+set autoindent
+set nowrap
+set history=999
+vnoremap <silent> pp "0p
+set tabstop=4
+
+"shift + >> コマンドのtab幅
+set shiftwidth=4 
+
+"## ファイル別カラー設定
+syntax enable
+"colorscheme evening 
+"colorscheme molokai
+colorscheme koehler 
+"colorscheme hybrid
+au BufRead,BufNewFile *.txt set filetype=txt
+
+let g:terminal_ansi_colors = [
+\ '#073642', 
+\ '#dc322f', 
+\ '#859900', 
+\ '#b58900', 
+\ '#268bd2', 
+\ '#d33682', 
+\ '#2aa198', 
+\ '#eee8d5', 
+\ '#002b36', 
+\ '#cb4b16', 
+\ '#586e75', 
+\ '#657b83', 
+\ '#839496', 
+\ '#6c71c4', 
+\ '#93a1a1', 
+\ '#fdf6e3' 
+\ ]
+
+" black
+" Red
+" green
+" yellow
+" blue
+" magenta
+" cyan
+" white
+" black (bright)
+" red (bright)
+" green (bright)
+" yellow (bright)
+" blue (bright)
+" magenta (bright)
+" cyan (bright)
+" white (bright)
+
+
+"## 制御コード
+set listchars=tab:>-,extends:<,trail:-,eol:<
+
+"## swap backup
+set nobackup
+set noswapfile
+"set backupdir=/tmp
+"set directory=/tmp
+
+
+"## copy & paste
+set clipboard=unnamedplus
+
+
+"## 日本語入力の切り替え
+
+function! ToggleFcitx()
+    let fcitx_state = system('fcitx5-remote')
+    call system('fcitx5-remote -c')
+    "if fcitx_state == '2'
+    "    call system('fcitx5-remote -o')
+    "else
+    "    call system('fcitx5-remote -c')
+    "endif
+endfunction
+
+augroup DisableFcitxInNormalMode
+    autocmd!
+    autocmd InsertEnter * call ToggleFcitx()
+augroup END
+
+
+"## tags
+if has('gvim')
+	set tags=~/.vim/tags/tags
+endif
+if has('vim')
+	set tags=~/.vim/tags/tags
+endif
+
+if has('nvim')
+	set tags=~/.config/nvim/tags/tags
+endif
+
+
+"## XML folding
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+"au FileType xml setlocal foldmethod=indent
+
+" terminal
+"autocmd TermOpen * startinsert
+" neovim terminal mapping
+if has('nvim')
+	" 新しいタブでターミナルを起動
+	"nnoremap @t :tabe<CR>:terminal<CR>
+	nnoremap @t :sp<CR>:terminal<CR>
+	" Ctrl + q でターミナルを終了
+	tnoremap <C-q> <C-\><C-n>:q<CR>
+	" ESCでターミナルモードからノーマルモードへ
+	tnoremap <ESC> <C-\><C-n>
+endif
+
+
+"########################## COC start
+"set statusline^=%{coc#status()} 
+nmap <silent> gds :sp<CR><Plug>(coc-definition)
+nmap <silent> gdv :vs<CR><Plug>(coc-definition)
+nmap <silent> gd <Plug>(coc-definition)
+
+"ノーマルモードで
+"スペース2回でCocList
+nmap <silent> g<space> :<C-u>CocList<cr>
+"スペースhでHover
+nmap <silent> gh :<C-u>call CocAction('doHover')<cr>
+"スペースrfでReferences
+nmap <silent> grf <Plug>(coc-references)
+"スペースrnでRename
+nmap <silent> grn <Plug>(coc-rename)
+"スペースfmtでFormat
+nmap <silent> gfmt <Plug>(coc-format)
+
+
+"########################## COC end
+
+

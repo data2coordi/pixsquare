@@ -1,0 +1,23 @@
+<!-- TensorFlow.jsの読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+<!-- coco-ssdモデルの読み込み -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+
+<!-- テストに使用する画像 -->
+<img id="img"  src="http://192.168.0.62:8082/wp-content/themes/pcolor/ilu/private/img/other/01nennga2012.jpg"/>
+-->
+
+
+<script>
+  // 画像の取得
+  img = document.getElementById('img');
+  img.src="http://192.168.0.62:8082/wp-content/themes/pcolor/ilu/private/img/flat/01tyuruwanpi.jpg"
+  // モデルの読み込み
+  cocoSsd.load().then(model => {
+    // 物体検出
+    model.detect(img).then(predictions => {
+      console.log('Predictions: ', predictions);
+    });
+  });
+</script>

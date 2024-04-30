@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flex-item {
+            flex: 0 0 auto;
+            margin: 10px;
+        }
+
+        .flex-item img, .flex-item figure {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+    <title>Flexbox Gallery</title>
+</head>
+
+<body>
+
+    <div class="flex-container">
+
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/01gene_megami.jpg" alt="Image 1">
+        </div>
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/02gene_baiku.jpg" alt="Image 2">
+        </div>
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/03gene_cake.jpg" alt="Image 3">
+        </div>
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/04gene_syukatsu.jpg" alt="Image 4">
+        </div>
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/04gene_syukatsu_b.jpg" alt="Image 5">
+        </div>
+        <div class="flex-item">
+            <img src="/wp-content/themes/pcolor/ilu/works/img/gene/05gene_syukatsu.jpg" alt="Image 6">
+        </div>
+        
+        <figure class="flex-item wp-block-image size-large">
+            <a href="http://192.168.0.62:8082/wp-content/uploads/2023/12/top_shika.png" target="_blank"
+                data-lightbox="image">
+                <img src="http://192.168.0.62:8082/wp-content/uploads/2023/12/top_shika.png" alt=""
+                    class="wp-image-423" />
+            </a>
+        </figure>
+        
+        <figure class="flex-item wp-block-image size-large">
+            <a href="http://192.168.0.62:8082/wp-content/uploads/2023/12/05fashion_biyoushi_b.jpg" target="_blank"
+                data-lightbox="image">
+                <img src="http://192.168.0.62:8082/wp-content/uploads/2023/12/05fashion_biyoushi_b.jpg"
+                    alt="05fashion_biyoushi_b:   nematode, nematode worm, roundworm" class="wp-image-366" />
+            </a>
+        </figure>
+    </div>
+
+</body>
+
+</html>

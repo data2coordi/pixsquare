@@ -1,0 +1,142 @@
+zz<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Hamburger Menu</title>
+  <style>
+    /* 共通のスタイル */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ヘッダースタイル */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color:#d81616; 
+      color: #fff;
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    /* ハンバーガーメニューのスタイル */
+    .nav {
+      display: flex;
+      align-items: center;
+    }
+
+    .drawer_open {
+      cursor: pointer;
+      display: flex; /* メニューアイコンを表示 */
+    }
+
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: #fff;
+      transition: 0.5s;
+    }
+
+    .drawer_open span:before {
+      bottom: 8px;
+    }
+
+    .drawer_open span:after {
+      top: 8px;
+    }
+
+    /* ナビゲーションメニューのスタイル */
+    .nav_content {
+      display: none;
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: #333;
+    }
+
+    .nav_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav_item {
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* メディアクエリ: 767px以下で表示 */
+    @media (max-width: 767px) {
+      .nav {
+        display: none; /* PC表示では非表示 */
+      }
+
+      .drawer_open {
+        display: flex; /* メニューアイコンを表示 */
+      }
+
+      .nav_content {
+        flex-direction: column;
+      }
+
+      .nav_content.active {
+        display: flex; /* メニューを表示 */
+      }
+    }
+
+    /* メディアクエリ: 768px以上で表示 */
+    @media (min-width: 768px) {
+      .drawer_open {
+        display: none; /* メニューアイコンを非表示 */
+      }
+
+      .nav {
+        display: flex; /* PC表示ではメニューを表示 */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="logo">ハンバーガーメニュー</div>
+
+    <!-- ハンバーガーメニューアイコン -->
+    <div class="nav">
+      <label for="drawer_input" class="drawer_open" onclick="toggleMenu()">
+        <span></span>
+      </label>
+    </div>
+
+    <!-- ナビゲーションメニュー -->
+    <nav class="nav_content">
+      <ul class="nav_list">
+        <li class="nav_item"><a href="#" onclick="toggleMenu()">メニュー1</a></li>
+        <li class="nav_item"><a href="#" onclick="toggleMenu()">メニュー2</a></li>
+        <li class="nav_item"><a href="#" onclick="toggleMenu()">メニュー3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    function toggleMenu() {
+      const navContent = document.querySelector('.nav_content');
+      navContent.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>

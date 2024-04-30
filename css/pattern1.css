@@ -1,0 +1,25 @@
+@charset "utf-8"
+
+.createp1 .site-title {
+  color: #555;
+}
+
+a {
+  color: #555;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.site-main-costum-works .wp-block-image img:hover {
+  opacity: 1;
+  border: 5px solid #000;
+}
+
+
+@media screen and (max-width: 767px) {
+  .site-main-costum-works .wp-block-image img:focus {
+    opacity: 1;
+    border: 5px solid #000;
+  }
+}
