@@ -13,7 +13,7 @@ jobs:
 
 
       - name: build
-        #run: zip -r pixsquare.zip . --exclude '\.\*'
+        #run: zip -r pixsquare.zip . --exclude '.*'
         run: zip -r pixsquare.zip . 
 
       - name: リリースを作成する
