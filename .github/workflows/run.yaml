@@ -14,7 +14,8 @@ jobs:
 
       - name: ビルドa
         #run: echo buildtesst
-        run: zip -r pixsquare.zip . --exclude ".*"
+        #run: zip -r pixsquare.zip . --exclude ".*"
+        run: zip -r pixsquare.zip . 
 
       - name: リリースを作成する
         uses: actions/create-release@v1
