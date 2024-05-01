@@ -12,9 +12,8 @@ jobs:
       - uses: actions/checkout@v2
 
 
-      - name: ビルドa
-        #run: echo buildtesst
-        #run: zip -r pixsquare.zip . --exclude ".*"
+      - name: build
+        #run: zip -r pixsquare.zip . --exclude '\.\*'
         run: zip -r pixsquare.zip . 
 
       - name: リリースを作成する
