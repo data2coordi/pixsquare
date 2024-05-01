@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
 
-      # - name: ビルド
+      # - name: ビルドa
         # run: echo build
           # ビルド処理を記述
       - run: echo "tag_name=${{ github.event.release.tag_name }}"
