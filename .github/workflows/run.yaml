@@ -24,7 +24,7 @@ jobs:
           body: ${{ steps.create-release.outputs.body }}
 
       - name: リリースアセットをアップロードする
-        uses: actions/upload-release-asset@v3
+        uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create-release.outputs.upload_url }}
           name: ${{ env.FILE_NAME }}
