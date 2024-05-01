@@ -32,8 +32,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create-release.outputs.upload_url }}
-          #upload_url: https://uploads.github.com/repos/data2coordi/pixsquare/releases/153632651/assets{?name,label}
-          #upload_url:https://github.com/data2coordi/pixsquare/releases/download/latest/index3.php.zip
           asset_name: pixsquare.zip
           asset_path: ./pixsquare.zip
           asset_content_type: application/zip
