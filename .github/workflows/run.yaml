@@ -5,7 +5,7 @@ on:
   push:
 
 env:
-  env_test:aaabbb
+  env_test : aaabbb
 
 jobs:
   upload-release-asset:
@@ -17,11 +17,11 @@ jobs:
       # - name: ビルド
         # run: echo build
           # ビルド処理を記述
-      - run: echo token=${{ secrets.GITHUB_TOKEN }}
-      - run: echo tag_name=${{ github.event.release.tag_name }}
-      - run: echo release_name=${{ github.event.release.tag_name }}
-      - run: echo body=${{ steps.create-release.outputs.body }}
-      - run: echo env_test=${{ env_test }}
+      - run: echo "token=${{ secrets.GITHUB_TOKEN }}"
+      - run: echo "tag_name=${{ github.event.release.tag_name }}"
+      - run: echo "release_name=${{ github.event.release.tag_name }}"
+      - run: echo "body=${{ steps.create-release.outputs.body }}"
+      - run: echo "env_test=${{ env_test }}"
 
       - name: リリースを作成する
         uses: actions/create-release@v1
