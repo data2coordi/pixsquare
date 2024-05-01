@@ -13,8 +13,7 @@ jobs:
 
 
       - name: build
-        #run: zip -r pixsquare.zip . --exclude '.*'
-        run: zip -r pixsquare.zip . 
+        run: zip -r pixsquare.zip . --exclude '.*'
 
       - name: リリースを作成する
         uses: actions/create-release@v1
