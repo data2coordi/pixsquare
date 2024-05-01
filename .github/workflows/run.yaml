@@ -41,3 +41,4 @@ jobs:
           upload_url: ${{ steps.create-release.outputs.upload_url }}
           asset_name: index.php.zip
           asset_path: ./index.php
+          asset_content_type: application/zip
