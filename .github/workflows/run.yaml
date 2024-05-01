@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: tag6_${{ github.ref }}
+          tag_name: tag7_${{ github.ref }}
           release_name: Release ${{ github.ref }}
           body: releasee body
 
