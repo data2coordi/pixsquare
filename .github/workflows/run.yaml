@@ -14,6 +14,7 @@ jobs:
       # - name: ビルド
         # run: echo build
           # ビルド処理を記述
+      - run: echo ${{ secrets.GITHUB_TOKEN }}
 
       - name: リリースを作成する
         uses: actions/create-release@v1
