@@ -41,4 +41,4 @@ jobs:
           asset_name: index3.php.zip
           asset_path: ./index.php
           asset_content_type: application/zip
-          force: true
+          overwrite: true
