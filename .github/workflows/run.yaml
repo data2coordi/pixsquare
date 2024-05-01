@@ -17,7 +17,7 @@ jobs:
 
       - name: ビルドa
         run: echo buildtesst
-        run: zip -r pixsquare.zip . --exclude '.*' 
+        run: zip -r pixsquare.zip . --exclude ".*"
 
       - name: リリースを作成する
         uses: actions/create-release@v1
@@ -39,5 +39,5 @@ jobs:
           #upload_url: https://uploads.github.com/repos/data2coordi/pixsquare/releases/153632651/assets{?name,label}
           #upload_url:https://github.com/data2coordi/pixsquare/releases/download/latest/index3.php.zip
           asset_name: pixsquare.zip
-          asset_path: ./style.css
+          asset_path: ./pixsquare.zip
           asset_content_type: application/zip
