@@ -6,4 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Zip files
-        run: zip -r pixsquare.zip ../../*
+        run: pwd
+        run: zip -r pixsquare.zip *
