@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: tag8_${{ github.ref }}
+          tag_name: ${{ github.ref }}/v1
           release_name: Release ${{ github.ref }}
           body: releasee body
 
@@ -40,6 +40,6 @@ jobs:
           upload_url: ${{ steps.create-release.outputs.upload_url }}
           #upload_url: https://uploads.github.com/repos/data2coordi/pixsquare/releases/153632651/assets{?name,label}
           #upload_url:https://github.com/data2coordi/pixsquare/releases/download/latest/index3.php.zip
-          asset_name: index4.php.zip
-          asset_path: ./index.php
+          asset_name: pixsquare.zip
+          asset_path: ./style.css
           asset_content_type: application/zip
