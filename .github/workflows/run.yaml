@@ -16,7 +16,7 @@ jobs:
           # ビルド処理を記述
 
       - name: リリースを作成する
-        uses: actions/create-release
+        uses: actions/create-release@v1
         id: create-release
         with:
           tag_name: ${{ github.event.release.tag_name }}
