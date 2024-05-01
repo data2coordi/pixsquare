@@ -5,7 +5,7 @@ on:
   push:
 
 env:
-  env_test : aaabbb
+  env_1 : aaabbb
 
 jobs:
   upload-release-asset:
@@ -21,7 +21,7 @@ jobs:
       - run: echo "tag_name=${{ github.event.release.tag_name }}"
       - run: echo "release_name=${{ github.event.release.tag_name }}"
       - run: echo "body=${{ steps.create-release.outputs.body }}"
-      - run: echo "env_test=${{ env_test }}"
+      - run: echo "env_1=${{ env.env_1 }}"
 
       - name: リリースを作成する
         uses: actions/create-release@v1
