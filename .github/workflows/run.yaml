@@ -4,7 +4,7 @@ name: create-release
 on:
   push:
     branches:
-      - main  # リポジトリのメインブランチにコミットされた場合のみトリガーされる
+      - master  # リポジトリのメインブランチにコミットされた場合のみトリガーされる
 
 jobs:
   build-and-release:
