@@ -39,5 +39,5 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create-release.outputs.upload_url }}
-          name: index.php
-          path: ./
+          name: index.php.zip
+          path: ./index.php
