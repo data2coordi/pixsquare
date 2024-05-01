@@ -4,9 +4,6 @@ name: Release
 on:
   push:
 
-env:
-  #env_1 : dummy
-
 jobs:
   upload-release-asset:
     runs-on: ubuntu-latest
