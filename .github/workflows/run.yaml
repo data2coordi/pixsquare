@@ -1,8 +1,9 @@
 
-name: learn-github-actions
+name: create-zip-archive
 on: [push]
 jobs:
-  check-bats-version:
+  zip-files:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is pen"
+      - name: Zip files
+        run: zip -r pixsquare.zip ../../*
