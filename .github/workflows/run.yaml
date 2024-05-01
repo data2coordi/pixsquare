@@ -29,9 +29,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.event.release.tag_name }}
+          tag_name: 0.6
           release_name: ${{ github.event.release.tag_name }}
-          body: ${{ steps.create-release.outputs.body }}
+          body: releasee body
 
 
       - name: リリースアセットをアップロードする
