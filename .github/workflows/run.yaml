@@ -7,5 +7,9 @@ jobs: # jobsで実行する内容を書く
   say_hello: # 実行する内容(job)の名前
     runs-on: ubuntu-latest # 実行するOS
     steps:
+      - run: pwd
+      - run: ls -l
+      - uses: actions/checkout@v2
       - run: echo "Hello World!" # 実行するコマンド
       - run: pwd
+      - run: ls -l
