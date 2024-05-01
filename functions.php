@@ -16,9 +16,10 @@ if (!defined('_S_VERSION')) {
 /**
  *投稿への目次の追加
  */
-function add_index( $content ) {
+function add_index($content)
+{
 
-	if ( !(is_single()) ) return $content;
+	if (!(is_single())) return $content;
 
 	$content = get_post_field('post_content', get_the_ID());
 	preg_match_all('/<(h[1-6]).*?>(.*?)<\/h[1-6]>/', $content, $matches);
@@ -27,7 +28,7 @@ function add_index( $content ) {
 
 	// H1-H3タグが存在する場合に目次を表示
 	if (!empty($matches[0])) :
-		?>
+?>
 		<div class="post-toc">
 			<h2>目次</h2>
 			<ul>
@@ -38,20 +39,20 @@ function add_index( $content ) {
 			</ul>
 		</div>
 	<?php
-	endif; 
+	endif;
 
 	$pattern = '/(<h[1-6])(.+?>)(.+?)(<\/h[1-6]>)/s';
-	preg_match_all( $pattern, $content, $elements, PREG_SET_ORDER );
+	preg_match_all($pattern, $content, $elements, PREG_SET_ORDER);
 	//elementsの数だけループ
-	foreach ( $elements as $em ) {
+	foreach ($elements as $em) {
 		$id = sanitize_title_with_dashes($em[3]);
-		$hPlusId=$em[1] . " id=" . $id . " " . $em[2] . $em[3] . $em[4];
-		$content = str_replace($em[0], $hPlusId , $content);
+		$hPlusId = $em[1] . " id=" . $id . " " . $em[2] . $em[3] . $em[4];
+		$content = str_replace($em[0], $hPlusId, $content);
 	}
 
-	return $content ;
+	return $content;
 }
-add_filter( 'the_content', 'add_index' );
+add_filter('the_content', 'add_index');
 
 /////////////////////////////////////////////////////////
 
@@ -59,12 +60,13 @@ add_filter( 'the_content', 'add_index' );
  *画像代替テキスト編集機能
  */
 //nonceの導入
-function enqueue_imgAltText_script() {
-    wp_enqueue_script('pixsquare_y_imgAltText-script', get_template_directory_uri() . '/set_imgAltText/set_imgAltText.js', array('jquery'), '', true);
-    wp_localize_script('pixsquare_y_imgAltText-script', 'wpData', array(
-        'url_dbUpdate' => get_template_directory_uri() .  '/set_imgAltText/regist_tbl_imgAltText.php',
-        'nonce'   => wp_create_nonce('my-custom-nonce'),
-    ));
+function enqueue_imgAltText_script()
+{
+	wp_enqueue_script('pixsquare_y_imgAltText-script', get_template_directory_uri() . '/set_imgAltText/set_imgAltText.js', array('jquery'), '', true);
+	wp_localize_script('pixsquare_y_imgAltText-script', 'wpData', array(
+		'url_dbUpdate' => get_template_directory_uri() .  '/set_imgAltText/regist_tbl_imgAltText.php',
+		'nonce'   => wp_create_nonce('my-custom-nonce'),
+	));
 }
 add_action('admin_enqueue_scripts', 'enqueue_imgAltText_script');
 
@@ -75,7 +77,6 @@ function add_mediaLibrary_customSection()
 
 
 	add_action('admin_head', 'set_mediaLibrary_customSection_imgAltText');
-
 }
 add_action('admin_menu', 'add_mediaLibrary_customSection');
 
@@ -499,7 +500,7 @@ function pixsquare_scripts()
 
 
 	wp_enqueue_style('pixsquare-y_style_font_awesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), false);
-	wp_enqueue_script( 'pixsquare-y_font_awesome',' https://use.fontawesome.com/releases/v5.15.4/js/all.js', array(), false, true );
+	wp_enqueue_script('pixsquare-y_font_awesome', ' https://use.fontawesome.com/releases/v5.15.4/js/all.js', array(), false, true);
 	//add y_add_e
 
 	wp_enqueue_style('pixsquare-style', get_stylesheet_uri(), array(), _S_VERSION);
@@ -516,8 +517,8 @@ function pixsquare_scripts()
 	//wp_enqueue_script( 'pixsquare-y_share_scroll', get_template_directory_uri() . '/share/js/scroll.js', array(), false, true );
 
 	//add for lightbox_s
-	wp_enqueue_style( 'pixsquare-y_lightbox_style', get_template_directory_uri() . '/lightbox/css/lightbox.min.css', array(), false );
-	wp_enqueue_script('pixsquare-y_lightbox_js',    get_template_directory_uri() . '/lightbox/js/lightbox-plus-jquery.min.js' , array(), false, false);
+	wp_enqueue_style('pixsquare-y_lightbox_style', get_template_directory_uri() . '/lightbox/css/lightbox.min.css', array(), false);
+	wp_enqueue_script('pixsquare-y_lightbox_js',    get_template_directory_uri() . '/lightbox/js/lightbox-plus-jquery.min.js', array(), false, false);
 	//add for lightbox_e
 
 
@@ -531,9 +532,11 @@ function pixsquare_scripts()
 	//wp_enqueue_script('pixsquare-y_tensorflow_coco-ssd',  'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd', array(), false, false);
 	// y add_share_e
 
-
-
+	// ui control s
+	wp_enqueue_script('pixsquare-hamburger',   get_template_directory_uri() . '/js/hamburger.js',   array(), _S_VERSION, true);
 	wp_enqueue_script('pixsquare-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	wp_enqueue_script('pixsquare-page-top',   get_template_directory_uri() . '/js/page-top.js',   array(), _S_VERSION, true);
+	// ui control e
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');

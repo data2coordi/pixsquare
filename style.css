@@ -4,22 +4,19 @@ Theme URI: https://color.toshidayurika.com
 Author: Yurika Toshida
 Author URI: https://color.toshidayurika.com
 Description: PixSquare offers a variety of features for creators to effectively display their work and create a professional impression. Creators can express their talents and skills in a more appealing way by leveraging features such as a square image gallery, auto-generated news, and AI captions.
-Version: 0.5
+Version: latest
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pixsquare
-Tags: custo1 column, custom color, custom-menu, custom logo, editor style, featured image, site editor, block editor pattern, rtl-language-support, fixed post, threaded-comments, translation-ready, wide block, block editor Style, style variations, accessibility, blog, portfolio, news
-
+Tags: blog,photography,portfolio,grid-layout
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
 
 pixsquare is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
