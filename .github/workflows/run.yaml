@@ -11,17 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: ビルド
-        run: echo build
+      # - name: ビルド
+        # run: echo build
           # ビルド処理を記述
 
       - name: リリースを作成する
         uses: actions/create-release@v1
         id: create-release
         with:
-          tag_name: ${{ github.event.release.tag_name }}
-          release_name: ${{ github.event.release.tag_name }}
-          body: ${{ steps.create-release.outputs.body }}
+          tag_name: test_tag_name
+          release_name: test_release_name
+          body: test_body
 
       - name: リリースアセットをアップロードする
         uses: actions/upload-release-asset@v1
