@@ -432,6 +432,13 @@ function pixsquare_setup()
 			'flex-height' => true,
 		)
 	);
+
+	// resolve of  theme check _s
+	add_theme_support("wp-block-styles");
+	add_theme_support("responsive-embeds");
+	add_theme_support("align-wide");
+	// resolve of  theme check _e
+
 }
 add_action('after_setup_theme', 'pixsquare_setup');
 
@@ -480,21 +487,6 @@ function pixsquare_scripts()
 {
 
 	//add y_add_s
-	/*
-	wp_enqueue_style( 'pixsquare-y_app_style', get_template_directory_uri() . '/css/app.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_import_style', get_template_directory_uri() . '/css/import.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_index2_style', get_template_directory_uri() . '/css/index2.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_lightbox_style', get_template_directory_uri() . '/css/lightbox.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_links_style', get_template_directory_uri() . '/css/links.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_mail_style', get_template_directory_uri() . '/css/mail.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_private_style', get_template_directory_uri() . '/css/private.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_profile_style', get_template_directory_uri() . '/css/profile.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_typography_style', get_template_directory_uri() . '/css/typography.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_utility_style', get_template_directory_uri() . '/css/utility.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_workflow_style', get_template_directory_uri() . '/css/workflow.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_works_style', get_template_directory_uri() . '/css/works.css', array(), false );
-	wp_enqueue_style( 'pixsquare-y_yurika_top_style', get_template_directory_uri() . '/css/yurika_top.css', array(), false );
-	 */
 	wp_enqueue_style('pixsquare-y_style', get_template_directory_uri() . '/css/pixsquare.css', array(), false);
 	wp_enqueue_style('pixsquare-y_style_gallery', get_template_directory_uri() . '/css/pixsquare_gallery.css', array(), false);
 
@@ -508,29 +500,11 @@ function pixsquare_scripts()
 
 
 	// y add_share_s
-	// wp_enqueue_style( 'pixsquare-y_share_style', get_template_directory_uri() . '/share/css/share.css', array(), false );
-	//wp_enqueue_style( 'pixsquare-y_share_style', get_template_directory_uri() . '/share/resource/lightbox.css', array(), false );
-
-	//wp_enqueue_script( 'pixsquare-y_share_default', get_template_directory_uri() . '/share/js/default.js', array(), false, true );
-	//wp_enqueue_script( 'pixsquare-y_share_jquery', get_template_directory_uri() . '/share/js/jquery.js', array(), false, true );
-	//wp_enqueue_script( 'pixsquare-y_share_lightbox_plus', get_template_directory_uri() . '/share/resource/lightbox_plus.js', array(), false, true );
-	//wp_enqueue_script( 'pixsquare-y_share_scroll', get_template_directory_uri() . '/share/js/scroll.js', array(), false, true );
-
 	//add for lightbox_s
 	wp_enqueue_style('pixsquare-y_lightbox_style', get_template_directory_uri() . '/lightbox/css/lightbox.min.css', array(), false);
 	wp_enqueue_script('pixsquare-y_lightbox_js',    get_template_directory_uri() . '/lightbox/js/lightbox-plus-jquery.min.js', array(), false, false);
 	//add for lightbox_e
 
-
-
-
-
-
-	// for tensorflow.js
-	//wp_enqueue_script('pixsquare-y_tensorflow',           'https://cdn.jsdelivr.net/npm/@tensorflow/tfjs', array(), false, false);
-	//wp_enqueue_script('pixsquare-y_tensorflow_mobilenet', 'https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet', array(), false, false);
-	//wp_enqueue_script('pixsquare-y_tensorflow_coco-ssd',  'https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd', array(), false, false);
-	// y add_share_e
 
 	// ui control s
 	wp_enqueue_script('pixsquare-hamburger',   get_template_directory_uri() . '/js/hamburger.js',   array(), _S_VERSION, true);
@@ -662,33 +636,50 @@ function render_name_field( $args ){
 //function create_page_with_gallery_on_template_select() {
 //    // テンプレート名が 'zzzzz' のときにのみ実行する
 //	echo("test garrary");
- //   if (is_page_template(' template-works.php')) {
-  //      // ページが既に存在するかどうかを確認する
-   //     $existing_page = get_page_by_title('ギャラリーページ');
+//   if (is_page_template(' template-works.php')) {
+//      // ページが既に存在するかどうかを確認する
+//     $existing_page = get_page_by_title('ギャラリーページ');
 //
- //       if (!$existing_page) {
-  //          // ページの情報
-   //         $page_title = 'ギャラリーページ';
-    //        $page_content = '<!-- wp:gallery {"ids":[1,2,3]} --></!-->'; // ギャラリーブロックのコード
-     //       $page_template = ''; // もしくはページテンプレートのファイル名を指定
+//       if (!$existing_page) {
+//          // ページの情報
+//         $page_title = 'ギャラリーページ';
+//        $page_content = '<!-- wp:gallery {"ids":[1,2,3]} --></!-->'; // ギャラリーブロックのコード
+//       $page_template = ''; // もしくはページテンプレートのファイル名を指定
 //
-            // ページを作成
- //           $page_id = wp_insert_post(array(
-  //              'post_title'    => $page_title,
-   //             'post_content'  => $page_content,
-    //            'post_status'   => 'publish',
-     //           'post_type'     => 'page',
-      //          'page_template' => $page_template,
-       //     ));
+// ページを作成
+//           $page_id = wp_insert_post(array(
+//              'post_title'    => $page_title,
+//             'post_content'  => $page_content,
+//            'post_status'   => 'publish',
+//           'post_type'     => 'page',
+//          'page_template' => $page_template,
+//     ));
 //
- //           if (!is_wp_error($page_id)) {
-  //              echo 'ギャラリーページが作成されました。';
-      //      } else {
+//           if (!is_wp_error($page_id)) {
+//              echo 'ギャラリーページが作成されました。';
+//      } else {
 //                echo 'エラー: ' . $page_id->get_error_message();
-   //         }
-     //   }
-    //}
+//         }
+//   }
+//}
 //}
 
 //add_action('save_post', 'create_page_with_gallery_on_template_select', 10, 3);
+//////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
+function add_my_editor_styles()
+{
+	add_theme_support('editor-styles');
+	add_editor_style(get_theme_file_uri('/style.css'));
+	add_editor_style(get_theme_file_uri('/css/pixsuqre.css'));
+	add_editor_style(get_theme_file_uri('/css/pixsuqre_gallery.css'));
+	add_editor_style(get_theme_file_uri('/css/pattern1.css'));
+	add_editor_style(get_theme_file_uri('/css/pattern2.css'));
+	add_editor_style(get_theme_file_uri('/css/pattern3.css'));
+	add_editor_style(get_theme_file_uri('/css/pattern4.css'));
+	add_editor_style(get_theme_file_uri('https://use.fontawesome.com/releases/v5.15.4/css/all.css'));
+	add_editor_style(get_theme_file_uri(get_template_directory_uri() . '/lightbox/css/lightbox.min.css'));
+}
+add_action('admin_init', 'add_my_editor_styles');
 //////////////////////////////////////////////////////////////////////////////////
