@@ -5,13 +5,14 @@ function set_mediaLibrary_customSection_imgAltText()
 {
 	global $pagenow;
 
-
+	$testzzz = _e('Hello', 'pixsquare');
 
 	// 現在のページがメディアライブラリのページの場合
 	if ($pagenow === 'upload.php') {
 
 
 ?>
+
 
 
 		<style>
@@ -36,7 +37,7 @@ function set_mediaLibrary_customSection_imgAltText()
 			#resultTable {
 				border-collapse: collapse;
 				width: 100%;
-				display : none;
+				display: none;
 			}
 
 			th,
@@ -45,8 +46,9 @@ function set_mediaLibrary_customSection_imgAltText()
 				padding: 8px;
 				text-align: left;
 			}
+
 			td.editable-after {
-			  background-color: lightblue;
+				background-color: lightblue;
 			}
 
 
@@ -55,16 +57,15 @@ function set_mediaLibrary_customSection_imgAltText()
 			}
 
 			#compCt {
-				  font-weight: bold;
-				  color: blue;
+				font-weight: bold;
+				color: blue;
 			}
-
-
 		</style>
 
 		<div class="mediaLibrary-customSection">
 			<h2>Create設定：画像の代替テキスト一括設定機能(SEO対策機能)</h2>
-
+			<p> <?php _e("good", "pixsquare"); ?> </p>
+			<p> <?php echo ($testzzz); ?> </p>
 			<p>本機能は画像の代替テキストをファイル名からセットします。AIが画像から判別した英単語を付与することもできます。</p>
 			<p>使い方：</p>
 			<p> 1. 下記の"一括選択"ボタンから画像を選択する。</p>
@@ -81,7 +82,7 @@ function set_mediaLibrary_customSection_imgAltText()
 			<button id="btn-get-imgAltText">選択画像の代替テキストの取得</button>
 
 			<p>注意点：3.のAI判別機能は公開されているAI(TensorFlow.js)を利用しています。AIによる判定で完全ではありません。
-			   AIが取得に失敗した場合はファイル名のみが適用されます。利用が適している場合にご利用ください。</p>
+				AIが取得に失敗した場合はファイル名のみが適用されます。利用が適している場合にご利用ください。</p>
 
 
 			<!-- 完了状況を表示する。 -->
@@ -127,12 +128,7 @@ function set_mediaLibrary_customSection_imgAltText()
 			let mgr_gui;
 			document.addEventListener('DOMContentLoaded', function() {
 
-				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus
-													, htmlOb_resultList
-													, htmlOb_btn_get_imgAltText
-													, htmlOb_btn_reg_imgAltText
-													, htmlOb_resultTable
-													);
+				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus, htmlOb_resultList, htmlOb_btn_get_imgAltText, htmlOb_btn_reg_imgAltText, htmlOb_resultTable);
 				let set_imgAltText = new Get_imgAltText_class(mgr_gui);
 
 				// メディアライブラリの「選択」ボタンがクリックされたときの処理
@@ -141,7 +137,7 @@ function set_mediaLibrary_customSection_imgAltText()
 
 
 						const selectedImages = wp.media.frame.state().get('selection').toJSON();
-						const selectOption = document.getElementById("selectOption").value;
+						const selectOset_mediaption = document.getElementById("selectOption").value;
 						//GUI コントロール
 
 						if (!(mgr_gui.start(selectedImages))) return;
