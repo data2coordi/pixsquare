@@ -180,7 +180,7 @@ function theme_customize($wp_customize)
 {
 
 	$wp_customize->add_section('base_pattern_section', array(
-		'title'    => __('ベース配色パターン', 'your-theme'),
+		'title'    => __('ベース配色パターン', 'pixsquare'),
 		'priority' => 30,
 		'description' => '選択したベース配色はサイト全体に反映されます。',
 	));
@@ -674,12 +674,20 @@ function add_my_editor_styles()
 	add_editor_style(get_theme_file_uri('/style.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre_gallery.css'));
-	add_editor_style(get_theme_file_uri('/css/pattern1.css'));
-	add_editor_style(get_theme_file_uri('/css/pattern2.css'));
-	add_editor_style(get_theme_file_uri('/css/pattern3.css'));
-	add_editor_style(get_theme_file_uri('/css/pattern4.css'));
+	//add_editor_style(get_theme_file_uri('/css/pattern1.css'));
+	//add_editor_style(get_theme_file_uri('/css/pattern2.css'));
+	//add_editor_style(get_theme_file_uri('/css/pattern3.css'));
+	//add_editor_style(get_theme_file_uri('/css/pattern4.css'));
 	add_editor_style(get_theme_file_uri('https://use.fontawesome.com/releases/v5.15.4/css/all.css'));
 	add_editor_style(get_theme_file_uri(get_template_directory_uri() . '/lightbox/css/lightbox.min.css'));
 }
 add_action('admin_init', 'add_my_editor_styles');
 //////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+
+//for localization 
+load_theme_textdomain('pixsquare', get_template_directory() . '/languages');
+
+///////////////////////////////////////////////
