@@ -688,6 +688,15 @@ add_action('admin_init', 'add_my_editor_styles');
 ///////////////////////////////////////////////
 
 //for localization 
-load_theme_textdomain('pixsquare', get_template_directory() . '/languages');
+function my_load_textdomain()
+{
+	$ret = load_theme_textdomain('pixsquare', get_template_directory() . '/languages');
+	var_dump('@@@@S for localization test:');
+	var_dump($ret);
+	var_dump(get_template_directory() . '/languages');
+	var_dump(' for localization test E@@@@@');
+}
+add_action('after_setup_theme', 'my_load_textdomain');
+
 
 ///////////////////////////////////////////////
