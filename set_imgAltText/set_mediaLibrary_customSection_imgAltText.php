@@ -36,7 +36,7 @@ function set_mediaLibrary_customSection_imgAltText()
 			#resultTable {
 				border-collapse: collapse;
 				width: 100%;
-				display : none;
+				display: none;
 			}
 
 			th,
@@ -45,8 +45,9 @@ function set_mediaLibrary_customSection_imgAltText()
 				padding: 8px;
 				text-align: left;
 			}
+
 			td.editable-after {
-			  background-color: lightblue;
+				background-color: lightblue;
 			}
 
 
@@ -55,33 +56,35 @@ function set_mediaLibrary_customSection_imgAltText()
 			}
 
 			#compCt {
-				  font-weight: bold;
-				  color: blue;
+				font-weight: bold;
+				color: blue;
 			}
-
-
 		</style>
 
-		<div class="mediaLibrary-customSection">
-			<h2>Create設定：画像の代替テキスト一括設定機能(SEO対策機能)</h2>
 
-			<p>本機能は画像の代替テキストをファイル名からセットします。AIが画像から判別した英単語を付与することもできます。</p>
-			<p>使い方：</p>
-			<p> 1. 下記の"一括選択"ボタンから画像を選択する。</p>
-			<p> 2. 選択ボックスからA、B、Cのいずれかのオプションを選択する。</p>
-			<p> 3. ”選択画像の代替テキストの取得”ボタンを押下する。("代替テキストを修正"ボタンが表示されます）</p>
-			<p> 4. 表示された代替テキストに問題がなければ"代替テキストを修正"ボタンを押下する。</p>
+		<div class="mediaLibrary-customSection">
+
+			<h2><?php esc_html_e('Create Setting: Bulk Setting Function for Alternative Text of Images (SEO Feature)', 'pixsquare'); ?></h2>
+
+			<p><?php esc_html_e('This function sets the alternative text of images from their file names. It can also append English words identified by AI from the images.', 'pixsquare'); ?></p>
+			<p><?php esc_html_e('How to Use:', 'pixsquare'); ?></p>
+			<p><?php esc_html_e('1. Select images using the "Select All" button below.', 'pixsquare'); ?></p>
+			<p><?php esc_html_e('2. Choose one of the options A, B, or C from the selection box.', 'pixsquare'); ?></p>
+			<p><?php esc_html_e('3. Click the "Get Alternative Text of Selected Images" button. (The "Modify Alternative Text" button will be displayed.)', 'pixsquare'); ?></p>
+			<p><?php esc_html_e('4. If there are no issues with the displayed alternative text, click the "Modify Alternative Text" button.', 'pixsquare'); ?></p>
 			<select id="selectOption" name="options">
-				<option value="onlyfile">A. "画像ファイル名" からセット</option>
-				<option value="clear">B. 代替テキストを削除する</option>
-				<option value="addai">C. "画像ファイル名＋AI判別の英単語" からセット</option>
+				<option value="onlyfile"><?php esc_html_e('A. Set from "Image File Name"', 'pixsquare'); ?></option>
+				<option value="clear"><?php esc_html_e('B. Remove Alternative Text', 'pixsquare'); ?></option>
+				<option value="addai"><?php esc_html_e('C. Set from "Image File Name + AI Identified English Words"', 'pixsquare'); ?></option>
 			</select>
 
-			<!-- ボタンをクリックしたときに画像のファイルパスを表示するためのボタン -->
-			<button id="btn-get-imgAltText">選択画像の代替テキストの取得</button>
+			<!-- Button to display the file path of the selected image when clicked -->
+			<button id="btn-get-imgAltText"><?php esc_html_e('Get Alternative Text of Selected Images', 'pixsquare'); ?></button>
 
-			<p>注意点：3.のAI判別機能は公開されているAI(TensorFlow.js)を利用しています。AIによる判定で完全ではありません。
-			   AIが取得に失敗した場合はファイル名のみが適用されます。利用が適している場合にご利用ください。</p>
+			<p><?php esc_html_e('Note: The AI identification function in step 3 utilizes publicly available AI (TensorFlow.js). It may not provide perfect identification. If AI fails to retrieve, only the file name will be applied. Please use it when appropriate.', 'pixsquare'); ?></p>
+
+
+
 
 
 			<!-- 完了状況を表示する。 -->
@@ -91,17 +94,17 @@ function set_mediaLibrary_customSection_imgAltText()
 			<ul class="list-result-getImgAltText"></ul>
 
 			<!-- DBへの登録ボタン -->
-			<button id="btn-reg-imgAltText" style="display: none;" disabled>代替テキストを修正</button>
+			<button id="btn-reg-imgAltText" style="display: none;" disabled><?php esc_html_e('Modify Alternative Text', 'pixsquare'); ?></button>
 
 			<!-- 結果テーブル -->
 			<table id="resultTable">
 				<thead>
 					<tr>
-						<th>id</th>
-						<th>ファイル名</th>
-						<th>現在の代替テキスト</th>
-						<th>修正後の代替テキスト</th>
-						<th>選択チェックボックス</th>
+						<th><?php esc_html_e('ID', 'pixsquare'); ?></th>
+						<th><?php esc_html_e('File Name', 'pixsquare'); ?></th>
+						<th><?php esc_html_e('Current Alternative Text', 'pixsquare'); ?></th>
+						<th><?php esc_html_e('Modified Alternative Text', 'pixsquare'); ?></th>
+						<th><?php esc_html_e('Selection Checkbox', 'pixsquare'); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -127,14 +130,9 @@ function set_mediaLibrary_customSection_imgAltText()
 			let mgr_gui;
 			document.addEventListener('DOMContentLoaded', function() {
 
-				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus
-													, htmlOb_resultList
-													, htmlOb_btn_get_imgAltText
-													, htmlOb_btn_reg_imgAltText
-													, htmlOb_resultTable
-													);
-				let set_imgAltText = new Get_imgAltText_class(mgr_gui);
+				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus, htmlOb_resultList, htmlOb_btn_get_imgAltText, htmlOb_btn_reg_imgAltText, htmlOb_resultTable);
 
+				let set_imgAltText = new Get_imgAltText_class(mgr_gui);
 				// メディアライブラリの「選択」ボタンがクリックされたときの処理
 				htmlOb_btn_get_imgAltText.addEventListener('click', async function() {
 					try {
@@ -160,7 +158,11 @@ function set_mediaLibrary_customSection_imgAltText()
 				});
 
 				let url_dbUpdate = '<?php echo  get_template_directory_uri(); ?>' + '/set_imgAltText/regist_tbl_imgAltText.php';
-				let regist_imgAltText = new Regist_imgAltText_class(mgr_gui);
+
+				let msg = {};
+				msg["msg1"] = "<?php _e('testdummy', 'pixsquare'); ?>";
+				msg["msg2"] = "<?php _e('testdummy3', 'pixsquare'); ?>";
+				let regist_imgAltText = new Regist_imgAltText_class(mgr_gui, msg);
 
 				// メディアライブラリの「登録」ボタンがクリックされたときの処理
 				htmlOb_btn_reg_imgAltText.addEventListener('click', async function() {
@@ -171,7 +173,7 @@ function set_mediaLibrary_customSection_imgAltText()
 						//GUI コントロール
 						mgr_gui.comp_reg();
 
-						alert('登録が完了しました。');
+						alert('Complete!');
 						location.reload();
 					} catch (error) {
 						console.error('Error:', error);

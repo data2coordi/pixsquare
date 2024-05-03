@@ -2,13 +2,17 @@ class Regist_imgAltText_class {
 
 
 	#mgr_gui;
+	#msg;
 
 	/**
 	 * コンストラクタ
 	 * @param mgr_gui Gui制御クラス
 	 */
-	constructor(mgr_gui) {
+	constructor(mgr_gui, msg) {
 			this.#mgr_gui=mgr_gui;
+			this.#msg=msg;
+			console.log(this.#msg["msg1"]);
+			console.log(this.#msg["msg2"]);
 			this.send = this.send.bind(this);
 	}
 
