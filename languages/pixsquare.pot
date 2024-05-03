@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-03T00:02:55+00:00\n"
+"POT-Creation-Date: 2024-05-03T02:05:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: pixsquare\n"
@@ -158,8 +158,84 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: set_imgAltText/regist_tbl_imgAltText.php:29
-msgid "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@OK"
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:67
+msgid "Create Setting: Bulk Setting Function for Alternative Text of Images (SEO Feature)"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:69
+msgid "This function sets the alternative text of images from their file names. It can also append English words identified by AI from the images."
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:70
+msgid "How to Use:"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:71
+msgid "1. Select images using the \"Select All\" button below."
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:72
+msgid "2. Choose one of the options A, B, or C from the selection box."
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:73
+msgid "3. Click the \"Get Alternative Text of Selected Images\" button. (The \"Modify Alternative Text\" button will be displayed.)"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:74
+msgid "4. If there are no issues with the displayed alternative text, click the \"Modify Alternative Text\" button."
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:76
+msgid "A. Set from \"Image File Name\""
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:77
+msgid "B. Remove Alternative Text"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:78
+msgid "C. Set from \"Image File Name + AI Identified English Words\""
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:82
+msgid "Get Alternative Text of Selected Images"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:84
+msgid "Note: The AI identification function in step 3 utilizes publicly available AI (TensorFlow.js). It may not provide perfect identification. If AI fails to retrieve, only the file name will be applied. Please use it when appropriate."
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:97
+msgid "Modify Alternative Text"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:103
+msgid "ID"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:104
+msgid "File Name"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:105
+msgid "Current Alternative Text"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:106
+msgid "Modified Alternative Text"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:107
+msgid "Selection Checkbox"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:163
+msgid "testdummy"
+msgstr ""
+
+#: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:164
+msgid "testdummy3"
 msgstr ""
 
 #: single.php:46
@@ -183,11 +259,7 @@ msgstr ""
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:38
-msgid "Sorryaaaaaaaaaaa"
-msgstr ""
-
-#: template-parts/content-none.php:45
+#: template-parts/content-none.php:44
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
