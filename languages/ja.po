@@ -158,8 +158,8 @@ msgid "Search Results for: %s"
 msgstr "検索結果：%s"
 
 #: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:67
-msgid "Create Setting: Bulk Setting Function for Alternative Text of Images "
-msgstr "設定を作成：画像の代替テキストの一括設定機能"
+msgid "Bulk Setting Function for Alternative Text of Images "
+msgstr "画像の代替テキストの一括設定機能"
 
 #: set_imgAltText/set_mediaLibrary_customSection_imgAltText.php:69
 msgid "This function sets the alternative text of images from their file names. It can also append English words identified by AI from the images."

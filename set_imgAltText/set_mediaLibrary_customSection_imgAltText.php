@@ -64,7 +64,7 @@ function set_mediaLibrary_customSection_imgAltText()
 
 		<div class="mediaLibrary-customSection">
 
-			<h2><?php esc_html_e('Create Setting: Bulk Setting Function for Alternative Text of Images ', 'pixsquare'); ?></h2>
+			<h2><?php esc_html_e('Bulk Setting Function for Alternative Text of Images ', 'pixsquare'); ?></h2>
 
 			<p><?php esc_html_e('This function sets the alternative text of images from their file names. It can also append English words identified by AI from the images.', 'pixsquare'); ?></p>
 			<p><?php esc_html_e('How to Use:', 'pixsquare'); ?></p>
