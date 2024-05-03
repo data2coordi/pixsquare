@@ -64,7 +64,7 @@ function set_mediaLibrary_customSection_imgAltText()
 
 		<div class="mediaLibrary-customSection">
 
-			<h2><?php esc_html_e('Create Setting: Bulk Setting Function for Alternative Text of Images (SEO Feature)', 'pixsquare'); ?></h2>
+			<h2><?php esc_html_e('Create Setting: Bulk Setting Function for Alternative Text of Images ', 'pixsquare'); ?></h2>
 
 			<p><?php esc_html_e('This function sets the alternative text of images from their file names. It can also append English words identified by AI from the images.', 'pixsquare'); ?></p>
 			<p><?php esc_html_e('How to Use:', 'pixsquare'); ?></p>
@@ -121,6 +121,11 @@ function set_mediaLibrary_customSection_imgAltText()
 		<script src='https://cdn.jsdelivr.net/npm/@tensorflow/tfjs'></script>
 		<script src='https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet'></script>
 		<script>
+			let msgtbl = {};
+			msgtbl["msg1"] = "<?php _e('Please select images using the bulk selection button.', 'pixsquare'); ?>"; /*一括選択ボタンで画像を選択してください*/
+			msgtbl["msg2"] = "<?php _e('Running. AI-based evaluation may take some time.', 'pixsquare'); ?>"; /*処理中です。AIによる判定に時間を要します。*/
+
+
 			let htmlOb_compStatus = document.getElementById("compCt");
 			let htmlOb_resultList = document.querySelector('.list-result-getImgAltText');
 			let htmlOb_btn_get_imgAltText = document.getElementById('btn-get-imgAltText');
@@ -130,7 +135,10 @@ function set_mediaLibrary_customSection_imgAltText()
 			let mgr_gui;
 			document.addEventListener('DOMContentLoaded', function() {
 
-				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus, htmlOb_resultList, htmlOb_btn_get_imgAltText, htmlOb_btn_reg_imgAltText, htmlOb_resultTable);
+
+
+
+				mgr_gui = new Mgr_guiStatus_class(htmlOb_compStatus, htmlOb_resultList, htmlOb_btn_get_imgAltText, htmlOb_btn_reg_imgAltText, htmlOb_resultTable, msgtbl);
 
 				let set_imgAltText = new Get_imgAltText_class(mgr_gui);
 				// メディアライブラリの「選択」ボタンがクリックされたときの処理
@@ -159,10 +167,7 @@ function set_mediaLibrary_customSection_imgAltText()
 
 				let url_dbUpdate = '<?php echo  get_template_directory_uri(); ?>' + '/set_imgAltText/regist_tbl_imgAltText.php';
 
-				let msg = {};
-				msg["msg1"] = "<?php _e('testdummy', 'pixsquare'); ?>";
-				msg["msg2"] = "<?php _e('testdummy3', 'pixsquare'); ?>";
-				let regist_imgAltText = new Regist_imgAltText_class(mgr_gui, msg);
+				let regist_imgAltText = new Regist_imgAltText_class(mgr_gui);
 
 				// メディアライブラリの「登録」ボタンがクリックされたときの処理
 				htmlOb_btn_reg_imgAltText.addEventListener('click', async function() {

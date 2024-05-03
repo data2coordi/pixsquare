@@ -8,11 +8,9 @@ class Regist_imgAltText_class {
 	 * コンストラクタ
 	 * @param mgr_gui Gui制御クラス
 	 */
-	constructor(mgr_gui, msg) {
+	constructor(mgr_gui) {
 			this.#mgr_gui=mgr_gui;
-			this.#msg=msg;
-			console.log(this.#msg["msg1"]);
-			console.log(this.#msg["msg2"]);
+			console.log(this.#mgr_gui.msgtbl["msg1"]);
 			this.send = this.send.bind(this);
 	}
 
@@ -36,10 +34,10 @@ class Regist_imgAltText_class {
 		})
 		.catch(error => {
 			console.error('Error updating alt text:');
-			alert('システムエラーが発生しました。登録に失敗しました。');
+			alert('System Error. Fail to update');
 		});
 
-		await mgr_gui.update_gui("登録が完了しました。");
+		await mgr_gui.update_gui("Update! Complete!");
 		return true;
 	}
 
@@ -58,6 +56,7 @@ class Mgr_guiStatus_class {
 	#htmlOb_btn_get_imgAltText;
 	#htmlOb_btn_reg_imgAltText;
 	#htmlOb_resultTable;
+	msgtbl;
 	/**
 	 * コンストラクタ
 	 * @param compStatus ステータス表示領域
@@ -71,6 +70,7 @@ class Mgr_guiStatus_class {
 				,getBtn
 				,regBtn
 				,rsultTable
+				,msgtbl
 	) {
 
 			this.#htmlOb_compStatus = compStatus;
@@ -78,6 +78,7 @@ class Mgr_guiStatus_class {
 			this.#htmlOb_btn_get_imgAltText = getBtn;
 			this.#htmlOb_btn_reg_imgAltText = regBtn;
 			this.#htmlOb_resultTable = rsultTable;
+			this.msgtbl =msgtbl;
 
 			this.start      = this.start.bind(this);
 			this.update_gui = this.update_gui.bind(this);
@@ -167,7 +168,7 @@ class Mgr_guiStatus_class {
 	//代替テキスト取得ボタン押下
 	start(selectedImages){
 		if (selectedImages.length==0) {
-			alert('"一括選択"ボタンで画像を選択してください');
+			alert(this.msgtbl["msg1"]);//"一括選択"ボタンで画像を選択してください
 			return false;
 		}
 
@@ -275,7 +276,7 @@ class Get_imgAltText_class {
 		tgtImg.style.display = 'none';      // 非表示に設定
 
 		//update gui
-		await mgr_gui.update_gui("処理中です。AIによる判定に時間を要します。" );
+		await mgr_gui.update_gui(this.#mgr_gui.msgtbl["msg2"]); //"処理中です。AIによる判定に時間を要します。" 
 
 
 		let model_mbnet="";
@@ -314,7 +315,7 @@ class Get_imgAltText_class {
 			//画面表示用
 			let listMsg = selectedImages[i].id + ':   ' + selectedImages[i].filename.split('.').slice(0, -1).join('.')  + imgAltText;
 			ct=i+1;
-			let statusMsg = '処理中です。 完了数:' +  ct + '/' + selectedImages.length ;
+			let statusMsg = '***Running*** [Complete Counta]:' +  ct + '/' + selectedImages.length + ',';
 			//update gui
 			await mgr_gui.update_gui(statusMsg);
 			await mgr_gui.update_guix(
@@ -330,8 +331,8 @@ class Get_imgAltText_class {
 		}
 
 		//update gui
-		let status = '完了数:' +   selectedImages.length + '/' + selectedImages.length ;
-		await mgr_gui.update_gui(status + '\n取得が完了しました。');
+		let status = '[Complete Count]:' +   selectedImages.length + '/' + selectedImages.length ;
+		await mgr_gui.update_gui(status + '\n. Complete!');
 		tgtImg.src = "";
 
 		return true;
