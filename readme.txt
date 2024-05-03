@@ -1,6 +1,6 @@
 === pixsquare ===
 
-Contributors: automattic
+Contributors: Yurika Toshida
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.5
@@ -14,7 +14,7 @@ A starter theme called pixsquare.
 
 == Description ==
 
-Description
+pixsquare offers a variety of features for creators to effectively display their work and create a professional impression. Creators can express their talents and skills in a more appealing way by leveraging features such as a square image gallery, auto-generated news, and AI captions.
 
 == Installation ==
 
