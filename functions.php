@@ -16,7 +16,7 @@ if (!defined('_S_VERSION')) {
 /**
  *投稿への目次の追加
  */
-function add_index($content)
+function pixsquare_add_index($content)
 {
 
 	if (!(is_single())) return $content;
@@ -52,7 +52,7 @@ function add_index($content)
 
 	return $content;
 }
-add_filter('the_content', 'add_index');
+add_filter('the_content', 'pixsquare_add_index');
 
 /////////////////////////////////////////////////////////
 
@@ -60,7 +60,7 @@ add_filter('the_content', 'add_index');
  *画像代替テキスト編集機能
  */
 //nonceの導入
-function enqueue_imgAltText_script()
+function pixsquare_enqueue_imgAltText_script()
 {
 	wp_enqueue_script('pixsquare_y_imgAltText-script', get_template_directory_uri() . '/set_imgAltText/set_imgAltText.js', array('jquery'), '', true);
 	wp_localize_script('pixsquare_y_imgAltText-script', 'wpData', array(
@@ -68,17 +68,17 @@ function enqueue_imgAltText_script()
 		'nonce'   => wp_create_nonce('my-custom-nonce'),
 	));
 }
-add_action('admin_enqueue_scripts', 'enqueue_imgAltText_script');
+add_action('admin_enqueue_scripts', 'pixsquare_enqueue_imgAltText_script');
 
 
 // ## メディアライブラリにカスタムセクションの追加
-function add_mediaLibrary_customSection()
+function pixsquare_add_mediaLibrary_customSection()
 {
 
 
 	add_action('admin_head', 'set_mediaLibrary_customSection_imgAltText');
 }
-add_action('admin_menu', 'add_mediaLibrary_customSection');
+add_action('admin_menu', 'pixsquare_add_mediaLibrary_customSection');
 
 include(get_template_directory() . '/set_imgAltText/set_mediaLibrary_customSection_imgAltText.php');
 
@@ -87,7 +87,7 @@ include(get_template_directory() . '/set_imgAltText/set_mediaLibrary_customSecti
 
 // ## パンくずリスト
 //////////////////////////////////////////////////////////
-function breadcrumb()
+function pixsquare_breadcrumb()
 {
 	$home = '<li><a href="' . home_url('url') . '" >HOME</a></li>';
 
@@ -174,9 +174,9 @@ add_filter('get_the_archive_title', function ($title) {
 
 /////////////////////////////////////////////
 // ## 配色カスタマイズ
-add_action('customize_register', 'theme_customize');
+add_action('customize_register', 'pixsquare_theme_customize');
 
-function theme_customize($wp_customize)
+function pixsquare_theme_customize($wp_customize)
 {
 
 	$wp_customize->add_section('base_pattern_section', array(
@@ -188,7 +188,7 @@ function theme_customize($wp_customize)
 	//type theme_modにするとwp_optionsにテーマ設定として値が格納される。
 	$wp_customize->add_setting('base_color_setting', array(
 		'type'  => 'theme_mod',
-		'sanitize_callback' => 'sanitize_choices',
+		'sanitize_callback' => 'pixsquare_sanitize_choices',
 	));
 
 	$wp_customize->add_control('base_color_setting', array(
@@ -218,7 +218,7 @@ function theme_customize($wp_customize)
 /* テーマカスタマイザー用のサニタイズ関数
 ---------------------------------------------------------- */
 //ラジオボタン
-function sanitize_choices($input, $setting)
+function pixsquare_sanitize_choices($input, $setting)
 {
 	global $wp_customize;
 	$control = $wp_customize->get_control($setting->id);
@@ -229,7 +229,7 @@ function sanitize_choices($input, $setting)
 	}
 }
 
-function your_theme_enqueue_custom_css()
+function pixsquare_your_theme_enqueue_custom_css()
 {
 	//$base_pattern = get_option('op_base_color_setting', 'pattern1');
 	$base_pattern = get_theme_mod('base_color_setting', 'pattern1');
@@ -239,7 +239,7 @@ function your_theme_enqueue_custom_css()
 	//var_dump(get_template_directory_uri() . '/css/' . $base_pattern . '.css');
 }
 
-add_action('wp_enqueue_scripts', 'your_theme_enqueue_custom_css');
+add_action('wp_enqueue_scripts', 'pixsquare_your_theme_enqueue_custom_css');
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -279,7 +279,7 @@ add_action('wp_enqueue_scripts', 'your_theme_enqueue_custom_css');
 
 // ## コピーライト対応
 //////////////////////////////////////////////////////////////////////////////////
-function add_custom_menu_page()
+function pixsquare_add_custom_menu_page()
 {
 	?>
 	<div class="wrap">
@@ -298,19 +298,19 @@ function add_custom_menu_page()
 <?php
 }
 
-function register_custom_setting()
+function pixsquare_register_custom_setting()
 {
 	register_setting('custom-menu-group', 'copy_right');
 }
 
 
-function custom_menu_page()
+function pixsquare_custom_menu_page()
 {
-	add_submenu_page('themes.php', 'フッダー設定', 'フッダー', 'manage_options', 'custom_menu_page', 'add_custom_menu_page',  5);
-	add_action('admin_init', 'register_custom_setting');
+	add_submenu_page('themes.php', 'フッダー設定', 'フッダー', 'manage_options', 'custom_menu_page', 'pixsquare_add_custom_menu_page',  5);
+	add_action('admin_init', 'pixsquare_register_custom_setting');
 }
 
-add_action('admin_menu', 'custom_menu_page');
+add_action('admin_menu', 'pixsquare_custom_menu_page');
 
 //////////////////////////////////////////////////////////////////////////////////
 
@@ -548,151 +548,29 @@ if (defined('JETPACK__VERSION')) {
 
 
 
-/*
-// ## 管理画面に項目追加用 テンプレート
-////////////////////////////////////////////////////////////////////////////////
-add_action(
-	'admin_menu',
-	function(){
-		// トップメニューを追加
-		add_menu_page(
-			'管理メニュータイトル'
-			, 'テスト用トップメニュー'
-			, 'manage_options' 
-			, 'top_menu' 
-			, 'render_menu_contents' // トップメニューの描画関数
-			,'dashicons-networking'
-			,0
-		);
-
-		// セクションを追加
-		add_settings_section(
-			'top_menu_section'
-			,'セクション'
-			,'render_section' //セクションの描画関数
-			,'top_menu'
-		);
-		
-		// フィールドを追加
-		add_settings_field(
-			'key_name'
-			,'名前'
-			,'render_name_field'  // フィールドの描画関数
-			,'top_menu'
-			,"top_menu_section"
-			,array( 'label_for' => 'key_name' )
-		);
-		
-		// フィールドをグループに登録
-		register_setting(
-			"top_menu_group"
-			,'key_name'
-		);
-    }
-);
-
-
-// セクションを描画する
-function render_section( $args ) {
-	?>
-		セクションのコンテンツを記載します
-		<hr>
-	<?
-}
-
-// トップメニュー画面を描画する
-function render_menu_contents() {
-	?>
-	<div class = "wrap">
-		<h1>テスト用オプション設定</h1>
-		<form method = "post" action = "options.php" >
-			<?php
- 				settings_fields( 'top_menu_group' );  
-				do_settings_sections( 'top_menu' ); 
-				submit_button( '設定を更新' , 'primary' );
-			?>
-		</form>
-	</div>
-	<?
-}
-
-// フィールドを描画する
-function render_name_field( $args ){
-	?>
-	<input
-		   type="text"
-		   name='<?= 'key_name' ?>'
-		   value='<?= esc_attr( get_option( 'key_name' ) ) ?>'
-			/>
-	<?
-}
- */
-
-
-
-
-// ## ギャラリー対応 > 使わない
-//////////////////////////////////////////////////////////////////////////////////
-//function create_page_with_gallery_on_template_select() {
-//    // テンプレート名が 'zzzzz' のときにのみ実行する
-//	echo("test garrary");
-//   if (is_page_template(' template-works.php')) {
-//      // ページが既に存在するかどうかを確認する
-//     $existing_page = get_page_by_title('ギャラリーページ');
-//
-//       if (!$existing_page) {
-//          // ページの情報
-//         $page_title = 'ギャラリーページ';
-//        $page_content = '<!-- wp:gallery {"ids":[1,2,3]} --></!-->'; // ギャラリーブロックのコード
-//       $page_template = ''; // もしくはページテンプレートのファイル名を指定
-//
-// ページを作成
-//           $page_id = wp_insert_post(array(
-//              'post_title'    => $page_title,
-//             'post_content'  => $page_content,
-//            'post_status'   => 'publish',
-//           'post_type'     => 'page',
-//          'page_template' => $page_template,
-//     ));
-//
-//           if (!is_wp_error($page_id)) {
-//              echo 'ギャラリーページが作成されました。';
-//      } else {
-//                echo 'エラー: ' . $page_id->get_error_message();
-//         }
-//   }
-//}
-//}
-
-//add_action('save_post', 'create_page_with_gallery_on_template_select', 10, 3);
-//////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////
-function add_my_editor_styles()
+function pixsquare_add_my_editor_styles()
 {
 	add_theme_support('editor-styles');
 	add_editor_style(get_theme_file_uri('/style.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre_gallery.css'));
-	//add_editor_style(get_theme_file_uri('/css/pattern1.css'));
-	//add_editor_style(get_theme_file_uri('/css/pattern2.css'));
-	//add_editor_style(get_theme_file_uri('/css/pattern3.css'));
-	//add_editor_style(get_theme_file_uri('/css/pattern4.css'));
 	add_editor_style(get_theme_file_uri('https://use.fontawesome.com/releases/v5.15.4/css/all.css'));
 	add_editor_style(get_theme_file_uri(get_template_directory_uri() . '/lightbox/css/lightbox.min.css'));
 }
-add_action('admin_init', 'add_my_editor_styles');
+add_action('admin_init', 'pixsquare_add_my_editor_styles');
 //////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////////////////////////////////////
 
 //for localization 
-function my_load_textdomain()
+function pixsquare_my_load_textdomain()
 {
 	$ret = load_theme_textdomain('pixsquare', get_template_directory() . '/languages');
 }
-add_action('after_setup_theme', 'my_load_textdomain');
+add_action('after_setup_theme', 'pixsquare_my_load_textdomain');
 
 
 ///////////////////////////////////////////////

@@ -35,7 +35,7 @@ if (!empty($matches[0])) :
 
 
 		//ぱんくず
-		breadcrumb(); 
+		pixsquare_breadcrumb(); 
 		while ( have_posts() ) :
 			the_post();
 

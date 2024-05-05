@@ -20,7 +20,7 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 
 				//ぱんくず
-				breadcrumb(); 
+				pixsquare_breadcrumb(); 
 				?>
 			</header><!-- .page-header -->
 
