@@ -1,4 +1,4 @@
-<?php /* Template Name: 記事一覧用テンプレート */ ?>
+<?php /* Template Name: New Information */ ?>
 
 <?php
 /**
@@ -13,19 +13,19 @@ get_header();
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-        <h1 class="entry-title"><?php the_title(); ?></h1>
-    </header><!-- .entry-header -->
+	<header class="entry-header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</header><!-- .entry-header -->
 
-    <div class="entry-content">
-        <?php the_content(); ?>
-    </div><!-- .entry-content -->
+	<div class="entry-content">
+		<?php the_content(); ?>
+	</div><!-- .entry-content -->
 
-    <?php if ( comments_open() || get_comments_number() ) : ?>
-        <div class="comments-area">
-            <?php comments_template(); ?>
-        </div><!-- .comments-area -->
-    <?php endif; ?>
+	<?php if (comments_open() || get_comments_number()) : ?>
+		<div class="comments-area">
+			<?php comments_template(); ?>
+		</div><!-- .comments-area -->
+	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
 
 
@@ -33,11 +33,11 @@ get_header();
 <!--template-arc-inforlist.php-->
 <main id="primary" class="site-main">
 	<?php
-	
-	
+
+
 	the_content();
-	
-	
+
+
 
 
 	// 取得したい内容を配列に記載します（不要箇所は省略可）
@@ -50,18 +50,18 @@ get_header();
 	$the_query = new WP_Query($args);
 
 	if ($the_query->have_posts()) :
-		echo("<table class='infotable'>");
-		echo('<tr><th>日付</th><th>タイトル</th></tr>');
+		echo ("<table class='infotable'>");
+		echo ('<tr><th>日付</th><th>タイトル</th></tr>');
 
 		while ($the_query->have_posts()) {
 			$the_query->the_post();
-			echo('<tr>');
-			echo('<td>' . get_the_date() . '</td>');
-			echo('<td><a href="' . get_permalink() . '">' . get_the_title() . '</a></td>');
-			echo('</tr>');
+			echo ('<tr>');
+			echo ('<td>' . get_the_date() . '</td>');
+			echo ('<td><a href="' . get_permalink() . '">' . get_the_title() . '</a></td>');
+			echo ('</tr>');
 		}
 
-		echo("</table>");
+		echo ("</table>");
 
 	endif;
 
@@ -84,7 +84,7 @@ get_header();
 
 		while ($the_query->have_posts()) {
 			$the_query->the_post();
-?>
+	?>
 			<div class="bl_card_container">
 				<!-- 左側のカラム：画像 -->
 				<div class="bl_card_column">
@@ -112,10 +112,10 @@ get_header();
 				</div>
 			</div>
 			<button id="js-pagetop" class="pagetop"><span class="pagetop__arrow"></span></button>
-<?php
+	<?php
 		}
 
-		the_posts_pagination(//ページャーを出力
+		the_posts_pagination( //ページャーを出力
 			array(
 				'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
 				'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
@@ -124,8 +124,8 @@ get_header();
 				//'prev_text'     => __( 'prev'), // 「前へ」リンクのテキスト
 				//'next_text'     => __( 'next'), // 「次へ」リンクのテキスト
 				'type'          => 'plain', // 戻り値の指定 (plain/list)
-				)
-			); 
+			)
+		);
 
 	else :
 

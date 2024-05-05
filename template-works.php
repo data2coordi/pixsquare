@@ -1,4 +1,4 @@
-<?php /* Template Name: Works用テンプレート */ ?>
+<?php /* Template Name: Works Template */ ?>
 
 <?php
 /**
