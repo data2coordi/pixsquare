@@ -22,7 +22,7 @@
 		<span class="sep"> </span>
 		<?php
 		/* translators: 1: Theme name, 2: Theme author. */
-		printf(esc_html__('Theme: %1$s by %2$s.', 'pixsquare'), 'Create', '<a class="create_footer" href="https://color.toshidayurika.com/">Yurika Toshida at Aurora Lab</a>');
+		printf(esc_html__('Theme: %1$s by %2$s.', 'pixsquare'), 'PixSquare', '<a class="create_footer" href="https://color.toshidayurika.com/">Yurika Toshida at Aurora Lab</a>');
 		?>
 		<a class="create_footer" href="<?php echo esc_url(__('https://wordpress.org/', 'pixsquare')); ?>">
 			<?php
