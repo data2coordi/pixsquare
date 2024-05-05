@@ -42,7 +42,7 @@ get_header();
 
 	// 取得したい内容を配列に記載します（不要箇所は省略可）
 	$args = array(
-		'posts_per_page'   => 20, // 読み込みしたい記事数（全件取得時は-1）
+		'posts_per_page'   => 3, // 読み込みしたい記事数（全件取得時は-1）
 		'order'            => 'DESC' // 昇順(ASC)か降順か(DESC）
 	);
 
@@ -70,8 +70,8 @@ get_header();
 
 	// 取得したい内容を配列に記載します（不要箇所は省略可）
 	$args = array(
-		'posts_per_page'   => 20, // 読み込みしたい記事数（全件取得時は-1）
-		'orderby'          => 'ID', // 何順で記事を読み込むか（省略時は日付順）
+		'posts_per_page'   => 3, // 読み込みしたい記事数（全件取得時は-1）
+		//'orderby'          => 'ID', // 何順で記事を読み込むか（省略時は日付順）
 		'order'            => 'DESC' // 昇順(ASC)か降順か(DESC）
 	);
 
@@ -117,7 +117,7 @@ get_header();
 
 		the_posts_pagination(//ページャーを出力
 			array(
-				'mid_size'      => 4, // 現在ページの左右に表示するページ番号の数
+				'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
 				'prev_next'     => true, // 「前へ」「次へ」のリンクを表示する場合はtrue
 				'prev_text'     => 'prev', // 「前へ」リンクのテキスト
 				'next_text'     => 'next', // 「次へ」リンクのテキスト
