@@ -550,7 +550,7 @@ if (defined('JETPACK__VERSION')) {
 
 
 //////////////////////////////////////////////////////////////////////////////////
-function pixsquare_add_my_editor_styles()
+function pixsquare_add_editor_styles()
 {
 	add_theme_support('editor-styles');
 	add_editor_style(get_theme_file_uri('/style.css'));
@@ -559,7 +559,7 @@ function pixsquare_add_my_editor_styles()
 	add_editor_style(get_theme_file_uri('https://use.fontawesome.com/releases/v5.15.4/css/all.css'));
 	add_editor_style(get_theme_file_uri(get_template_directory_uri() . '/lightbox/css/lightbox.min.css'));
 }
-add_action('admin_init', 'pixsquare_add_my_editor_styles');
+add_action('admin_init', 'pixsquare_add_editor_styles');
 //////////////////////////////////////////////////////////////////////////////////
 
 
