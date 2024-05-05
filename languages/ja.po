@@ -72,7 +72,7 @@ msgstr "コメントは閉じられています。"
 #. translators: 1: Theme name, 2: Theme author.
 #: footer.php:25
 msgid "Theme: %1$s by %2$s."
-msgstr "テーマ：%1$s by %2$s。"
+msgstr "テーマ：%1$s by %2$s."
 
 #: footer.php:27
 msgid "https://wordpress.org/"
