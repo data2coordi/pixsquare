@@ -36,6 +36,8 @@ https://color.toshidayurika.com/pixsquare-portfolio-site-for-creators/
 
 https://color.toshidayurika.com/theme-download-page/
 
+https://color.toshidayurika.com/download/
+
 == Changelog ==
 
 = 1.0 - May 12 2015 =
