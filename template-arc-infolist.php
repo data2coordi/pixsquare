@@ -88,30 +88,26 @@ get_header();
 			<div class="bl_card_container">
 				<!-- 左側のカラム：画像 -->
 				<div class="bl_card_column">
-					<article class="bl_card">
-						<a href="<?php the_permalink(); ?>" class="bl_card_link">
-							<figure class="bl_card_imgWrapper">
-								<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-							</figure>
-						</a>
-					</article>
+					<a href="<?php the_permalink(); ?>" class="bl_card_link">
+						<figure class="bl_card_imgWrapper">
+							<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+						</figure>
+					</a>
 				</div>
 
 				<!-- 右側のカラム：本文 -->
 				<div class="bl_card_column">
 					<article class="bl_card">
-						<a href="<?php the_permalink(); ?>" class="bl_card_link">
-							<div class="bl_card_body">
-								<?php the_title('<h3 class="bl_card_ttl">', '</h3>'); ?>
-								<span class="entry-date"><?php echo get_the_date(); ?></span>
-								<p class="bl_card_txt"><?php echo get_the_excerpt(); ?></p>
-								<a href="<?php the_permalink(); ?>">続きを読む</a>
-							</div>
-						</a>
+						<?php the_title('<h3 class="bl_card_ttl">', '</h3>'); ?>
+						<div class="bl_card_body">
+							<span class="entry-date"><?php echo get_the_date(); ?></span>
+							<p class="bl_card_txt"><?php echo get_the_excerpt(); ?></p>
+							<a href="<?php the_permalink(); ?>">続きを読む</a>
+						</div>
 					</article>
 				</div>
 			</div>
-			<button id="js-pagetop" class="pagetop"><span class="pagetop__arrow"></span></button>
+			<button class="pagetop"><span class="pagetop__arrow"></span></button>
 	<?php
 		}
 
