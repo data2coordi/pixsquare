@@ -34,8 +34,7 @@ https://color.toshidayurika.com/pixsquare-portfolio-site-for-creators/
 
 ==Theme usage page==
 
-https://color.toshidayurika.com/pixsquare-portfolio-site-for-creators/
-
+https://color.toshidayurika.com/theme-download-page/
 
 == Changelog ==
 
