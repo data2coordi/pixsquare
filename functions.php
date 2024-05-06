@@ -490,9 +490,6 @@ function pixsquare_scripts()
 	wp_enqueue_style('pixsquare-y_style', get_template_directory_uri() . '/css/pixsquare.css', array(), false);
 	wp_enqueue_style('pixsquare-y_style_gallery', get_template_directory_uri() . '/css/pixsquare_gallery.css', array(), false);
 
-
-	wp_enqueue_style('pixsquare-y_style_font_awesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), false);
-	wp_enqueue_script('pixsquare-y_font_awesome', ' https://use.fontawesome.com/releases/v5.15.4/js/all.js', array(), false, true);
 	//add y_add_e
 
 	wp_enqueue_style('pixsquare-style', get_stylesheet_uri(), array(), _S_VERSION);
@@ -556,7 +553,6 @@ function pixsquare_add_editor_styles()
 	add_editor_style(get_theme_file_uri('/style.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre.css'));
 	add_editor_style(get_theme_file_uri('/css/pixsuqre_gallery.css'));
-	add_editor_style(get_theme_file_uri('https://use.fontawesome.com/releases/v5.15.4/css/all.css'));
 	add_editor_style(get_theme_file_uri(get_template_directory_uri() . '/lightbox/css/lightbox.min.css'));
 }
 add_action('admin_init', 'pixsquare_add_editor_styles');

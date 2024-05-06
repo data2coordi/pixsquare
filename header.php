@@ -23,6 +23,12 @@
 
 
 
+	<?php wp_head(); ?>
+</head>
+
+<body <?php body_class('createpc createp1 createp2 createp3 createp4 createp5'); ?>>
+
+
 	<!-- ハンバーガーメニュー _s -->
 	<div class="drawer">
 		<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
@@ -34,10 +40,8 @@
 	<!-- ハンバーガーメニュー _e -->
 
 
-	<?php wp_head(); ?>
-</head>
 
-<body <?php body_class('createpc createp1 createp2 createp3 createp4 createp5'); ?>>
+
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'pixsquare'); ?></a>
@@ -70,7 +74,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'pixsquare'); ?></button>
+				<button class="menu-toggle" aria-controls="gNavi" aria-expanded="false"><?php esc_html_e('Primary Menu', 'pixsquare'); ?></button>
 				<?php
 				wp_nav_menu(
 					array(
