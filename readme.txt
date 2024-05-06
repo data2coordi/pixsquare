@@ -28,6 +28,15 @@ pixsquare offers a variety of features for creators to effectively display their
 
 pixsquare includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
+==Promotion page==
+
+https://color.toshidayurika.com/pixsquare-portfolio-site-for-creators/
+
+==Theme usage page==
+
+https://color.toshidayurika.com/pixsquare-portfolio-site-for-creators/
+
+
 == Changelog ==
 
 = 1.0 - May 12 2015 =
