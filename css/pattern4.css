@@ -71,6 +71,9 @@ a:hover {
 
 .createp4 .bl_card_body {
   background-color: #fff;
+  margin-top: -45px;
+  padding-top: 45px;
+
 }
 
 .createp4 a {
