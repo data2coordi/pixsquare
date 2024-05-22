@@ -42,13 +42,13 @@ main {
 }
 
 /* underline */
-/* .entry-content a {
+a {
     text-decoration: underline;
 }
 
-.entry-content a:hover, .entry-content a:focus {
+a:hover, a:focus {
     text-decoration: underline;
-} */
+}
 
 .post-11.page.type-page.status-publish.hentry {
 	margin-top: 50px;
