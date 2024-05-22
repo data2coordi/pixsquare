@@ -104,6 +104,11 @@ html {
   border: 5px solid #7ccb97;
 }
 
+.createp2 .bl_card_body{
+  margin-top: -45px;
+  padding-top: -45px;
+}
+
 
 .createp3 #secondary.widget-area {
   background-color: rgb(253, 252, 219);
