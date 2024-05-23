@@ -15,6 +15,11 @@ a {
   border: 5px solid #000;
 }
 
+.createp2 .bl_card_body{
+  margin-top: -45px;
+  padding-top: 45px;
+}
+
 
 @media screen and (max-width: 767px) {
   .site-main-costum-works .wp-block-image img:focus {
