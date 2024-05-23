@@ -27,6 +27,8 @@
 </head>
 
 <body <?php body_class('createpc createp1 createp2 createp3 createp4 createp5'); ?>>
+	<a href="#primary" class="skip-link screen-reader-text"><?php _e('Skip to content', 'your-text-domain'); ?></a>
+
 
 
 	<!-- ハンバーガーメニュー _s -->
