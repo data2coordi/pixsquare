@@ -1350,6 +1350,8 @@ pc用メディアend
 		margin-top: 12px;
 		margin-left: 20px;
 		color: #000;
+		position: absolute;
+        left: -12px;
 	}
 
 	.wp-block-separator.has-alpha-channel-opacity.boder.is-style-default {
@@ -1389,7 +1391,7 @@ pc用メディアend
 	.createp4 .bl_card_body {
 		width: 330px;
 		height: 250px;
-		margin-top: 40px;
+		margin-top: 60px;
 	}
 
 	.createp4 .bl_card_body p {
