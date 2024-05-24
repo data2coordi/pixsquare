@@ -1389,6 +1389,7 @@ pc用メディアend
 	.createp4 .bl_card_body {
 		width: 330px;
 		height: 300px;
+		margin-top: 30px;
 	}
 
 	.createp4 .bl_card_body p {
