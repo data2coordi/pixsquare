@@ -150,7 +150,7 @@ msgstr "%s へのコメントを残す<span class=\"screen-reader-text\"></span>
 #: template-parts/content-page.php:39
 #: template-parts/content-page_costum_works.php:80
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "<span class=\"screen-reader-text\">%s</span> を編集"
+msgstr "<span class=\"screen-reader-text\">%s</span> 編集"
 
 #. translators: %s: search query.
 #: search.php:21
