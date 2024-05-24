@@ -74,6 +74,10 @@ a:hover, a:focus {
     z-index: 10000;
 }
 
+a.skip-link.screen-reader-text {
+	color: #fff;
+}
+
 .post-11.page.type-page.status-publish.hentry {
 	margin-top: 50px;
 }
