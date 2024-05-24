@@ -1338,6 +1338,7 @@ pc用メディアend
 		font-size: 1.4rem;
 		line-height: 2.2;
 		margin-left: 20px;
+		margin-top: 50px;
 		width: 330px;
 	}
 
@@ -1352,7 +1353,6 @@ pc用メディアend
 		margin-left: 20px;
 		color: #000;
 		position: absolute;
-        left: -12px;
 	}
 
 	.bl_card {
