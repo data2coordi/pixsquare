@@ -50,6 +50,30 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.screen-reader-text:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    overflow: visible;
+    clip: auto;
+    background: #000;
+    color: #fff;
+    z-index: 10000;
+}
+
 .post-11.page.type-page.status-publish.hentry {
 	margin-top: 50px;
 }
