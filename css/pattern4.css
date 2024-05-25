@@ -64,7 +64,7 @@ a:hover {
   color: #fff;
 }
 
-.createp4 a:visited {
+.createp4 a:visited a:focus {
   color: #999;
 }
 
