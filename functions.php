@@ -570,3 +570,36 @@ add_action('after_setup_theme', 'pixsquare_my_load_textdomain');
 
 
 ///////////////////////////////////////////////
+
+
+///////////////////////////////////////////////
+// ブロックエディタにスタイルを適用 _s
+function pixsquare_register_block_styles()
+{
+	// ブロックスタイルを登録する
+	register_block_style(
+		'core/paragraph', // ブロック名 (テキストブロックは 'core/paragraph' です)
+		array(
+			'name'         => 'type-page', // スタイルの名前
+			'label'        => __('Pixsquare Text Style', 'pixsquare'), // スタイルのラベル
+		)
+	);
+}
+add_action('init', 'pixsquare_register_block_styles');
+// ブロックエディタにスタイルを適用 _e
+///////////////////////////////////////////////
+
+
+function pixsquare_register_block_patterns()
+{
+	// カスタムブロックパターンを登録する
+	register_block_pattern(
+		'my-theme/intro-pattern', // パターン名
+		array(
+			'title'       => __('Intro Section', 'pixsquare'), // パターンのタイトル
+			'description' => __('A custom pattern for creating an introduction section.', 'pixsquare'), // パターンの説明
+			'content'     => '<!-- wp:paragraph --><p>' . __('Welcome to Our Site', 'pixsquare') . '</p><!-- /wp:paragraph --><!-- wp:paragraph --><p>' . __('Welcom to pixsquare.', 'pixsquare') . '</p><!-- /wp:paragraph -->', // パターンのコンテンツ
+		)
+	);
+}
+add_action('init', 'pixsquare_register_block_patterns');
