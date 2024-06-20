@@ -51,7 +51,7 @@ get_header();
 
 	if ($the_query->have_posts()) :
 		echo ("<table class='infotable'>");
-		echo ('<tr><th>日付</th><th>タイトル</th></tr>');
+		echo ('<tr><th>Date</th><th>Title</th></tr>');
 
 		while ($the_query->have_posts()) {
 			$the_query->the_post();
