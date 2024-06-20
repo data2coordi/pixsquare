@@ -10,8 +10,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Pixsquare
  * 
+ * @package Pixsquare
  * 
  * 
  */
