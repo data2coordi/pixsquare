@@ -199,7 +199,7 @@ function pixsquare_theme_customize($wp_customize)
 		'type' => 'radio',
 		'choices' => array(
 			'pattern1' => 'なし',
-			'pattern2' => 'シンプル',
+			'pattern2' => 'カラフル',
 			'pattern3' => 'ファッション',
 			'pattern4' => '信頼',
 		),
