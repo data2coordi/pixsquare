@@ -194,14 +194,14 @@ function pixsquare_theme_customize($wp_customize)
 	$wp_customize->add_control('base_color_setting', array(
 		'section' => 'base_pattern_section',
 		'settings' => 'base_color_setting',
-		'label' => __('Basee Color Setting'),
-		'description' => __('Select base color'),
+		'label' => __('Basee Color Setting', 'pixsquare'),
+		'description' => __('Select base color', 'pixsquare'),
 		'type' => 'radio',
 		'choices' => array(
-			'pattern1' => __('None'),
-			'pattern2' => __('colorful'),
-			'pattern3' => __('Fashion'),
-			'pattern4' => __('Trust'),
+			'pattern1' => __('None', 'pixsquare'),
+			'pattern2' => __('colorful', 'pixsquare'),
+			'pattern3' => __('Fashion', 'pixsquare'),
+			'pattern4' => __('Trust', 'pixsquare'),
 		),
 	));
 
