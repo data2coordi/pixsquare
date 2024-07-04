@@ -180,9 +180,9 @@ function pixsquare_theme_customize($wp_customize)
 {
 
 	$wp_customize->add_section('base_pattern_section', array(
-		'title'    => __('ベース配色パターン', 'pixsquare'),
+		'title'    => __('base color pattern', 'pixsquare'),
 		'priority' => 30,
-		'description' => '選択したベース配色はサイト全体に反映されます。',
+		'description' => __('The base color scheme you choose will be reflected throughout your site.', 'pixsquare'),
 	));
 
 	//type theme_modにするとwp_optionsにテーマ設定として値が格納される。
@@ -194,14 +194,14 @@ function pixsquare_theme_customize($wp_customize)
 	$wp_customize->add_control('base_color_setting', array(
 		'section' => 'base_pattern_section',
 		'settings' => 'base_color_setting',
-		'label' => 'ベース配色設定',
-		'description' => '配色を選択してください。',
+		'label' => __('Basee Color Setting'),
+		'description' => __('Select base color'),
 		'type' => 'radio',
 		'choices' => array(
-			'pattern1' => 'なし',
-			'pattern2' => 'カラフル',
-			'pattern3' => 'ファッション',
-			'pattern4' => '信頼',
+			'pattern1' => __('None'),
+			'pattern2' => __('colorful'),
+			'pattern3' => __('Fashion'),
+			'pattern4' => __('Trust'),
 		),
 	));
 

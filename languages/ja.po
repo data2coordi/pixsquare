@@ -270,3 +270,37 @@ msgstr "ページ："
 #: template-parts/content.php:43
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "続きを読む<span class=\"screen-reader-text\">「%s」</span>"
+
+
+#: functions.php
+#  function pixsquare_theme_customize
+msgid "Basee Color Setting"
+msgstr "基本の配色カラー設定"
+
+#  function pixsquare_theme_customize
+msgid "Select base color"
+msgstr "基本配色カラーを選択"
+
+#  function pixsquare_theme_customize
+msgid "None"
+msgstr "なし"
+
+#  function pixsquare_theme_customize
+msgid "colorful"
+msgstr "カラフル"
+
+#  function pixsquare_theme_customize
+msgid "Fashion"
+msgstr "ファッション"
+
+#  function pixsquare_theme_customize
+msgid "Trust"
+msgstr "信頼"
+
+#  function pixsquare_theme_customize
+msgid "base color pattern"
+msgstr "ベース配色パターン"
+
+#  function pixsquare_theme_customize
+msgid "The base color scheme you choose will be reflected throughout your site."
+msgstr "選択したベース配色はサイト全体に反映されます。"
