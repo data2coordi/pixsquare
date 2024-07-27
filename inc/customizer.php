@@ -10,6 +10,10 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
+
+
+
+
 function pixsquare_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
@@ -31,8 +35,33 @@ function pixsquare_customize_register( $wp_customize ) {
 			)
 		);
 	}
+
+	///// copy right _s
+	// フッダー設定セクションを追加
+	$wp_customize->add_section('footer_settings_section', array(
+		'title'      => __('footer setting', 'pixsquare'),
+		'priority'   => 30,
+	));
+
+	// コピーライト設定を追加
+	$wp_customize->add_setting('copy_right', array(
+		'default'    => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	));
+
+	// コピーライト入力フィールドを追加
+	$wp_customize->add_control('copy_right_control', array(
+		'label'      => __('Copy Right setting', 'pixsquare'),
+		'section'    => 'footer_settings_section',
+		'settings'   => 'copy_right',
+		'type'       => 'text',
+	));
+	///// copy right _e
+
 }
 add_action( 'customize_register', 'pixsquare_customize_register' );
+
+
 
 /**
  * Render the site title for the selective refresh partial.

@@ -304,3 +304,11 @@ msgstr "ベース配色パターン"
 #  function pixsquare_theme_customize
 msgid "The base color scheme you choose will be reflected throughout your site."
 msgstr "選択したベース配色はサイト全体に反映されます。"
+
+
+#  costumiser copy right
+msgid "Copy Right setting"
+msgstr "コピーライトの設定"
+
+msgid "footer setting"
+msgstr "フッダーの設定"

@@ -16,8 +16,7 @@
 
 	<div class="site-info">
 
-
-		<?php echo "<br>" . get_option('copy_right'); ?>
+		<?php echo "<br>" . esc_html(get_theme_mod('copy_right')); ?>
 		<br>
 		<span class="sep"> </span>
 		<?php
