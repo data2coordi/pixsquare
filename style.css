@@ -38,7 +38,7 @@ main {
 }
 
 img.custom-logo {
-	width: 60%;
+	width: 30%;
     height: auto;
 }
 
@@ -47,7 +47,7 @@ img.custom-logo {
 }
 
 /* underline */
-a {
+a:link {
     text-decoration: underline;
 }
 
@@ -822,7 +822,6 @@ textarea {
 
 .createp4 .site-header {
 	padding-top: 5px;
-	margin-top: 20px;
 }
 
 .site-main-costum-entrance {
