@@ -49,6 +49,7 @@ img.custom-logo {
 /* underline */
 a:link {
     text-decoration: underline;
+	text-decoration-thickness: 1px;
 }
 
 a:hover, a:focus {
@@ -138,6 +139,9 @@ h3 {
 	color: #707070;
 	margin-top: 15px;
 	margin-bottom: 0;
+}
+.createp3 h3:first-child {
+	margin-top: 40px;
 }
 
 hr {
