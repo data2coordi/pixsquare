@@ -75,5 +75,8 @@
     "zip",
     "zlib",
     "wordpress"
-  ]
+  ],
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
