@@ -913,6 +913,11 @@ textarea {
     transition: 0.5s;
   }
 
+  ul#gNavi li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+  }
+
   .drawer-open {
     display: none;
   }
