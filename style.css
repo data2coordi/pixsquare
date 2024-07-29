@@ -386,23 +386,6 @@ textarea {
 
 }
 
-ul#gNavi li a {
-	margin-top: 20px;
-}
-
-ul#gNavi {
-	height: 2rem;
-}
-
-ul#gNavi > li {
-	width: 25%;
-}
-
-ul#gNavi li {
-	list-style: none;
-    position: relative;
-}
-
 .site-branding {
 	margin-top: 20px;
 	width: 40%;
@@ -947,8 +930,21 @@ textarea {
 		list-style: none;
 	}
 
-	.sub-menu {
+	ul#gNavi li a {
+		margin-top: 20px;
+	}
+	
+	ul#gNavi {
+		height: 2rem;
+	}
+	
+	ul#gNavi > li {
+		width: 25%;
+	}
+	
+	ul#gNavi li {
 		list-style: none;
+		position: relative;
 	}
 
 	.drawer-open {
