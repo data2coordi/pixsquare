@@ -37,8 +37,10 @@ main {
 }
 
 img.custom-logo {
-  width: 30%;
+  width: 40%;
   height: auto;
+  position: relative;
+  left: 230px;
 }
 
 .site-main {
