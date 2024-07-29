@@ -386,9 +386,22 @@ textarea {
 
 }
 
-/* .site-title {
-	width: 100%;
-} */
+ul#gNavi li a {
+	margin-top: 20px;
+}
+
+ul#gNavi {
+	height: 2rem;
+}
+
+ul#gNavi > li {
+	width: 25%;
+}
+
+ul#gNavi li {
+	list-style: none;
+    position: relative;
+}
 
 .site-branding {
 	margin-top: 20px;
@@ -936,7 +949,6 @@ textarea {
 
 	.sub-menu {
 		list-style: none;
-		display: none;
 	}
 
 	.drawer-open {
