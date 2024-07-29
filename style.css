@@ -821,7 +821,7 @@ textarea {
 }
 
 #gNavi {
-	margin-top: 20px;
+	
 }
 
 .createp4 .site-header {
@@ -928,6 +928,7 @@ textarea {
 			sans-serif;
 		font-size: 1.5rem;
 		list-style: none;
+		margin-top: 20px;
 	}
 
 	ul#gNavi li a {
