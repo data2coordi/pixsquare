@@ -29,7 +29,7 @@ html {
   background-color: #344135ff;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
-  height: 250px;
+  height: 220px;
   padding-top: 50px;
   margin-top: -20px;
   align-items: start;
@@ -48,19 +48,25 @@ html {
   line-height: 2.2;
 }
 
+img.custom-logo {
+  width: 30%;
+  height: auto;
+  position: relative;
+}
+
 .createp3 .bl_card_body p {
   color: #0e212bf7;
 }
 
 .createp3 ul#gNavi li a {
   display: flex;
+  background: #344135ff;
   color: #fff;
 }
 
 .createp3 ul#gNavi li a:hover {
   color: #fff;
 }
-
 
 .createp3 a:visited {
   color: #525d96;
@@ -74,7 +80,8 @@ html {
 
 .createp3 a {
   color: #0e212bf7;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+    sans-serif;
 }
 
 .createp3 .type-page p {
@@ -146,11 +153,11 @@ html {
   /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
-.createp3 .site-title>a {
+.createp3 .site-title > a {
   color: #fff;
 }
 
-.createp3 .create_footer+a {
+.createp3 .create_footer + a {
   color: #fff;
 }
 
@@ -168,9 +175,7 @@ html {
   border: 5px solid #0e212bff;
 }
 
-
 @media screen and (max-width: 767px) {
-
   .createp3 #gNavi {
     background-color: #fff;
     height: 600px;
@@ -179,7 +184,6 @@ html {
   .createp3 ul#gNavi {
     background-color: rgba(60, 128, 165, 0.7);
     width: 200px;
-
   }
 
   .createp3 .drawer-open span {
@@ -233,7 +237,5 @@ html {
   .site-main-costum-works .wp-block-image img:focus {
     opacity: 1;
     border: 5px solid #0e212bff;
-
   }
-
 }

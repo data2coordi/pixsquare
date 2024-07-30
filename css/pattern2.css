@@ -8,6 +8,12 @@ html {
   background-color: rgb(253, 252, 219);
 }
 
+img.custom-logo {
+  width: 30%;
+  height: auto;
+  position: relative;
+}
+
 .createp2 p {
   color: #3d2e1ef7;
   font-size: 1.4rem;
@@ -15,6 +21,17 @@ html {
   margin-left: auto;
   margin-right: auto;
   line-height: 2.2;
+}
+
+.createp3 .site-header {
+  background-color: #ff9050;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  height: 220px;
+  padding-top: 50px;
+  margin-top: -20px;
+  align-items: start;
+  color: #3d2e1ef7;
 }
 
 .createp2 .entry-header h1 {
@@ -25,17 +42,14 @@ html {
   background-color: rgb(253, 252, 219);
 }
 
-.createp2 ul#gNavi li a {
-  color: #3d2e1ef7;
-}
-
 .createp2 a:visited {
   color: #8d765df7;
 }
 
 .createp2 a {
   color: #3d2e1ef7;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+    sans-serif;
 }
 
 .createp2 h1 {
@@ -63,7 +77,24 @@ html {
 }
 
 .createp2 #gNavi {
-  background-color: rgb(253, 252, 219);
+  background-color: #ff9050;
+}
+
+.createp2 .site-header {
+  background-color: #ff9050;
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  height: 220px;
+  padding-top: 50px;
+  margin-top: -20px;
+  align-items: start;
+  color: #fff;
+}
+
+.createp2 ul#gNavi li a {
+  display: flex;
+  color: #fff;
+  background-color: #ff9050;
 }
 
 .createp2 #colophon {
@@ -104,11 +135,10 @@ html {
   border: 5px solid #7ccb97;
 }
 
-.createp2 .bl_card_body{
+.createp2 .bl_card_body {
   margin-top: -45px;
   padding-top: 45px;
 }
-
 
 .createp3 #secondary.widget-area {
   background-color: rgb(253, 252, 219);
@@ -120,7 +150,6 @@ html {
 }
 
 @media screen and (max-width: 767px) {
-
   .createp2 #gNavi {
     background-color: #7db1fa9f;
   }

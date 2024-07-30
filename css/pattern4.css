@@ -18,7 +18,6 @@ a:hover {
 .createp4 body {
   margin: 0;
   padding: 0;
-
 }
 
 .createp4 #secondary.widget-area {
@@ -29,7 +28,7 @@ a:hover {
   background-color: #0730b8ff;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
-  height: 250px;
+  height: 220px;
   padding-top: 50px;
   margin-top: -20px;
   align-items: start;
@@ -41,8 +40,6 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-
-
 
 .createp4 p {
   color: #000;
@@ -56,8 +53,8 @@ a:hover {
 
 .createp4 ul#gNavi li a {
   display: flex;
-  padding: 10px;
   color: #fff;
+  background-color: #0730b8ff;
 }
 
 .createp4 ul#gNavi li a:hover {
@@ -76,12 +73,12 @@ pre.wp-block-preformatted {
   background-color: #fff;
   margin-top: -45px;
   padding-top: 45px;
-
 }
 
 .createp4 a {
   color: #000;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,
+    sans-serif;
 }
 
 .createp4 .type-page p {
@@ -112,8 +109,13 @@ pre.wp-block-preformatted {
   color: #73124ff7;
 }
 
+img.custom-logo {
+  width: 30%;
+  height: auto;
+  position: relative;
+}
+
 .createp4 #gNavi {
-  background-color: #000;
   width: 960px;
   margin-left: auto;
   margin-right: auto;
@@ -122,7 +124,6 @@ pre.wp-block-preformatted {
 .createp4 .site-description {
   color: #fff;
 }
-
 
 .createp4 #colophon {
   background-color: #000;
@@ -158,11 +159,11 @@ pre.wp-block-preformatted {
   /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
-.createp4 .site-title>a {
+.createp4 .site-title > a {
   color: #fff;
 }
 
-.createp4 .create_footer+a {
+.createp4 .create_footer + a {
   color: #fff;
 }
 
@@ -175,13 +176,12 @@ pre.wp-block-preformatted {
   border: solid 2px #73124ff7;
 }
 
-.site-main-costum-works .wp-block-image img:hover{
-	opacity: 1;
-	border: 5px solid #000;
+.site-main-costum-works .wp-block-image img:hover {
+  opacity: 1;
+  border: 5px solid #000;
 }
 
 @media screen and (max-width: 767px) {
-
   .createp4 #gNavi {
     background-color: #fff;
     height: 600px;
@@ -190,7 +190,6 @@ pre.wp-block-preformatted {
   .createp4 ul#gNavi {
     background-color: #1137ba9f;
     width: 200px;
-
   }
 
   .createp4 .drawer-open span {
@@ -205,7 +204,6 @@ pre.wp-block-preformatted {
 
   .createp4 .drawer-open span:after {
     background: #fff;
-
   }
 
   .createp4 .site-branding {
@@ -230,11 +228,14 @@ pre.wp-block-preformatted {
     display: flex;
   }
 
-  .createp4 .site-header {
+  .createp4.site-header {
     background-color: #0730b8f7;
-    width: 450px;
-    height: 150px;
-    margin: 0;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+    height: 220px;
+    padding-top: 50px;
+    margin-top: -20px;
+    align-items: start;
     color: #fff;
   }
 
