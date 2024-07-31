@@ -97,6 +97,10 @@ img.custom-logo {
   background-color: #ff9050;
 }
 
+.createp2 ul#gNavi ul > li {
+  margin-left: -32px;
+}
+
 .createp2 #colophon {
   background-color: #7db1fa;
   color: #fff;
@@ -147,6 +151,13 @@ img.custom-logo {
 .createp3 .pagetop {
   background: #83cb9b;
   border: solid 2px #61cd85;
+}
+
+img.custom-logo {
+  width: 40%;
+  height: auto;
+  margin-left: 25%;
+  position: relative;
 }
 
 @media screen and (max-width: 767px) {

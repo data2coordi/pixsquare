@@ -8,8 +8,16 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
+
+.type-page p {
+  color: #222;
+}
 #gNavi li a {
   background: #333;
+}
+
+.createp1 ul#gNavi ul > li {
+  margin-left: -32px;
 }
 
 .site-main-costum-works .wp-block-image img:hover {
@@ -34,8 +42,9 @@ a {
 }
 
 img.custom-logo {
-  width: 30%;
+  width: 40%;
   height: auto;
+  margin-left: 25%;
   position: relative;
 }
 

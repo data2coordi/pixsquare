@@ -46,9 +46,17 @@ a:link {
   text-decoration-thickness: 1px;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+ul#gNavi li a:hover,
+ul#gNavi li a:focus,
 a:hover,
 a:focus {
-  text-decoration: underline;
+  border: #fff;
+  background: #c6c6c6;
+  color: #222;
 }
 
 img.attachment-post-thumbnail {
@@ -884,6 +892,8 @@ textarea {
     text-align: center;
     text-decoration: none;
     width: 100%;
+    position: relative;
+    z-index: 1000;
   }
 
   #gNavi li a:hover {
