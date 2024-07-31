@@ -14,6 +14,7 @@ a {
 }
 #gNavi li a {
   background: #333;
+  height: 3rem;
 }
 
 .createp1 ul#gNavi ul > li {
