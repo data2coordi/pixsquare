@@ -896,7 +896,8 @@ textarea {
     z-index: 1000;
   }
 
-  #gNavi li a:hover {
+  #gNavi li a:hover,
+  #gNavi li a:focus {
     opacity: 0.8;
   }
 
@@ -969,27 +970,6 @@ pc用メディアend
 スマホ用
 ****************************************/
 
-/* @media screen and (max-width: 500px) {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px 20px;
-	background: #fff;
-	color: #333;
-	text-decoration: none;
-	text-align: center;
-	font-weight: bold;
-	float: none;
-	padding: 8px 15px;
-	font-family: "Lucida Grande",
-	"Lucida Sans Unicode",
-	Helvetica,
-	Arial,
-	Verdana,
-	sans-serif;
-	font-size: 1.5rem;
-}  */
-
 @media screen and (max-width: 767px) {
   .menu {
     list-style: none;
@@ -1021,7 +1001,6 @@ pc用メディアend
     padding: 0;
     margin-top: 50px;
     text-align: left;
-    left: -55%;
   }
 
   #gNavi.menu.nav-menu.active {
@@ -1031,6 +1010,8 @@ pc用メディアend
   #gNavi li a {
     background: none;
     text-align: left;
+    display: block;
+    width: 200px;
   }
 
   .menu-item {
@@ -1051,6 +1032,12 @@ pc用メディアend
     text-decoration: none;
     color: #888;
     font-size: 16px;
+  }
+
+  img.custom-logo {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .site-main {
@@ -1209,16 +1196,15 @@ pc用メディアend
 
   .menu-item {
     margin: 0;
-    text-align: center;
   }
 
   .drawer-open {
     display: flex;
-
     margin-top: 20px;
     margin-left: 10px;
     cursor: pointer;
-    z-index: 1001;
+    position: relative;
+    z-index: 1000;
   }
 
   .drawer-open span,
@@ -1369,6 +1355,7 @@ pc用メディアend
   .site-branding {
     width: 100%;
     font-size: 0.7rem;
+    text-align: center;
   }
 
   /* カード全体に対するスタイル */
