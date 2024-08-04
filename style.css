@@ -1014,11 +1014,6 @@ pc用メディアend
     width: 200px;
   }
 
-  .menu-item {
-    margin-right: 20px;
-    padding: 20px;
-  }
-
   #gNavi a {
     text-decoration: none;
     color: #fff;
@@ -1196,6 +1191,9 @@ pc用メディアend
 
   .menu-item {
     margin: 0;
+    margin-right: 20px;
+    padding: 20px;
+    overflow-x: hidden;
   }
 
   .drawer-open {
@@ -1215,17 +1213,18 @@ pc用メディアend
     height: 3px;
     width: 25px;
     border-radius: 3px;
-    background: #333;
+    background: #fff;
     transition: 0.5s;
     position: absolute;
+    top: -50px;
   }
 
   .drawer-open span:before {
-    bottom: 8px;
+    bottom: 18px;
   }
 
   .drawer-open span:after {
-    top: 8px;
+    top: -8px;
   }
 
   .drawer-hidden {

@@ -31,16 +31,6 @@
 
 
 
-	<!-- ハンバーガーメニュー _s -->
-	<div class="drawer">
-		<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
-		<input type="checkbox" id="drawer-check" class="drawer-hidden">
-
-		<!-- ハンバーガーアイコン -->
-		<label for="drawer-check" class="drawer-open"><span></span></label>
-	</div>
-	<!-- ハンバーガーメニュー _e -->
-
 
 
 
@@ -75,17 +65,31 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="gNavi" aria-expanded="false"><?php esc_html_e('Primary Menu', 'pixsquare'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id' => 'gNavi',
-						'container_class' => 'clearfix',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
+
+			<!-- ハンバーガーメニュー _s -->
+			<div class="drawer">
+				<!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+				<input type="checkbox" id="drawer-check" class="drawer-hidden">
+
+				<!-- ハンバーガーアイコン -->
+				<label for="drawer-check" class="drawer-open"><span></span></label>
+
+
+
+				<nav id="site-navigation" class="main-navigation">
+					<button class="menu-toggle" aria-controls="gNavi" aria-expanded="false"><?php esc_html_e('Primary Menu', 'pixsquare'); ?></button>
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'menu-1',
+							'menu_id' => 'gNavi',
+							'container_class' => 'clearfix',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
+
+			</div>
+			<!-- ハンバーガーメニュー _e -->
 
 		</header><!-- #masthead -->
