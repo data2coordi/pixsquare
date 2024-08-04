@@ -971,7 +971,7 @@ pc用メディアend
 ****************************************/
 
 @media screen and (max-width: 767px) {
-  .menu {
+  #gNavi.menu.nav-menu {
     list-style: none;
     display: flex;
     margin: 0;
@@ -993,14 +993,6 @@ pc用メディアend
     height: 100%;
     padding-bottom: 50px;
     background: #fff;
-  }
-
-  #gNavi.menu.nav-menu {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin-top: 50px;
-    text-align: left;
   }
 
   #gNavi.menu.nav-menu.active {
@@ -1177,12 +1169,22 @@ pc用メディアend
 
   /*------------ハンバーガーメニュー-----*/
   .menu {
-    display: none;
+    display: flex;
     flex-direction: column;
-    position: absolute;
+    padding: 0;
+    margin-top: 50px;
+    text-align: left;
+    position: fixed; /* fixedにすることで画面に固定 */
     top: 60px;
     left: 0;
     background: #3333339f;
+    z-index: 999;
+    transition: transform 0.5s ease; /* トランスフォームにアニメーションを追加 */
+    transform: translateX(-100%); /* 初期状態では画面外に移動 */
+  }
+
+  #drawer-check:checked ~ nav .menu {
+    transform: translateX(0); /* チェックされたときに画面内に表示 */
   }
 
   .menu.active {
@@ -1198,8 +1200,8 @@ pc用メディアend
 
   .drawer-open {
     display: flex;
-    margin-top: 20px;
-    margin-left: 10px;
+    margin-top: -30px;
+    margin-left: 20px;
     cursor: pointer;
     position: relative;
     z-index: 1000;
@@ -1216,15 +1218,14 @@ pc用メディアend
     background: #fff;
     transition: 0.5s;
     position: absolute;
-    top: -50px;
   }
 
   .drawer-open span:before {
-    bottom: 18px;
+    bottom: 8px;
   }
 
   .drawer-open span:after {
-    top: -8px;
+    top: 8px;
   }
 
   .drawer-hidden {
@@ -1235,18 +1236,22 @@ pc用メディアend
     display: flex;
   }
 
+  .drawer-open span {
+    background: #fff;
+  }
+
   #drawer-check:checked ~ .drawer-open span {
     background: rgba(255, 255, 255, 0);
   }
 
-  #drawer-check:checked ~ .drawer-open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
+  #drawer-check:checked ~ .drawer-open span:before {
+    bottom: 0; /* 下の棒を中央に移動 */
+    transform: rotate(45deg); /* 45度回転 */
   }
 
-  #drawer-check:checked ~ .drawer-open span::after {
-    top: 0;
-    transform: rotate(-45deg);
+  #drawer-check:checked ~ .drawer-open span:after {
+    top: 0; /* 上の棒を中央に移動 */
+    transform: rotate(-45deg); /* -45度回転 */
   }
 
   table.infotable {
