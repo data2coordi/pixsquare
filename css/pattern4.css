@@ -57,6 +57,10 @@ a:hover {
   background-color: #0730b8ff;
 }
 
+#gNavi li ul li ul {
+  left: 95%;
+}
+
 .createp4 ul#gNavi li a:hover {
   color: #fff;
 }

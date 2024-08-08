@@ -116,7 +116,7 @@ h1 {
 }
 
 .entry-header h1 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 h1::first-letter {
@@ -875,12 +875,14 @@ textarea {
 @media screen and (min-width: 768px) {
   #gNavi {
     display: flex;
-    height: 2rem;
+    height: 3rem;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     width: 960px;
     margin-top: 100px;
+    position: relative;
+    z-index: 1000;
   }
 
   #gNavi li a {
@@ -892,8 +894,6 @@ textarea {
     text-align: center;
     text-decoration: none;
     width: 100%;
-    position: relative;
-    z-index: 1000;
   }
 
   #gNavi li a:hover,
@@ -914,28 +914,18 @@ textarea {
     height: 0;
     overflow: hidden;
     transition: 0.5s;
+    width: 200px;
   }
 
   #gNavi li:hover > ul > li {
     height: 3rem;
     overflow: visible;
-    width: 200px;
   }
 
-  ul#gNavi li ul li ul {
-    left: 190px;
+  #gNavi li ul li ul {
     position: absolute;
     top: -3px;
-    height: 3rem;
-    width: 200px;
-  }
-
-  .drawer-open {
-    display: none;
-  }
-
-  .menu {
-    display: flex;
+    width: 100%;
   }
 
   /*-----------エントランスの原因----------------*/
@@ -1099,12 +1089,6 @@ pc用メディアend
     margin-top: 0px;
   }
 
-  .entry-header h1 {
-    margin-top: 0;
-    padding-top: 0;
-    margin-left: 15px;
-  }
-
   p {
     min-width: 40%;
     width: 360px;
@@ -1159,8 +1143,11 @@ pc用メディアend
     margin-bottom: 150px;
   }
 
-  .createp4 .entry-header h1 {
-    width: 330px;
+  .entry-header h1 {
+    width: 350px;
+    margin-top: 0;
+    padding-top: 0;
+    margin: auto;
   }
 
   div.entry-meta {
@@ -1445,7 +1432,10 @@ pc用メディアend
 
   h2 {
     font-size: 2.5rem;
-    width: 100%;
+    width: 90%;
+    margin-top: 0;
+    padding-top: 0;
+    margin: auto;
   }
 
   h3 {

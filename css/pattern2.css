@@ -80,6 +80,10 @@ img.custom-logo {
   background-color: #ff9050;
 }
 
+#gNavi li ul li ul {
+  left: 90%;
+}
+
 .createp2 .site-header {
   background-color: #ff9050;
   margin: 0 calc(50% - 50vw);
