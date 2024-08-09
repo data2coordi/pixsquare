@@ -1168,19 +1168,42 @@ pc用メディアend
   }
 
   .wp-block-categories {
-    margin-top: 18%;
     padding-left: 5%;
     padding-right: 5%;
   }
 
   .wp-block-latest-posts.wp-block-latest-posts__list {
-    margin-top: 18%;
     padding-left: 5%;
     padding-right: 5%;
   }
 
-  p.wp-block-tag-cloud a {
-    padding-top: 13%;
+  .widget p.wp-block-tag-cloud {
+    padding-top: 0;
+  }
+
+  blockquote {
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  ul.wp-block-list {
+    width: 90%;
+    padding: 0;
+    margin: auto;
+  }
+
+  .wp-block-embed__wrapper {
+    width: 90%;
+    margin: auto;
+  }
+
+  p.comment-form-comment {
+    padding-bottom: 0;
+  }
+
+  .comment-form p.form-submit {
+    padding-top: 0;
   }
 
   /*------------ハンバーガーメニュー-----*/
@@ -1327,7 +1350,9 @@ pc用メディアend
   .post-thumbnail img {
     max-width: 330px;
     height: auto;
-    margin-left: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #block-2.widget.widget_block.widget_search {
@@ -1341,7 +1366,9 @@ pc用メディアend
     line-height: 2.2;
     width: 100%;
     margin-top: 0;
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 0;
     margin: auto;
   }
 
@@ -1357,9 +1384,9 @@ pc用メディアend
     margin: 0;
     width: 320px;
     margin-top: 12px;
-    margin-left: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
     color: #000;
-    position: absolute;
   }
 
   .bl_card {
@@ -1481,7 +1508,8 @@ pc用メディアend
   h5,
   h6 {
     font-size: 1.6rem;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
 
   #colophon.site-footer {
