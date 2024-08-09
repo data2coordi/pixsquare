@@ -534,7 +534,6 @@ textarea {
 .post-toc li {
   margin-top: 1.2rem;
   color: transparent;
-  text-align: center;
 }
 
 .createp4 .infotable {
@@ -965,7 +964,8 @@ pc用メディアend
     display: flex;
     margin: 0;
     padding: 10px;
-    z-index: 1000;
+    position: relative;
+    z-index: 1999;
   }
 
   p.site-title {
@@ -1025,6 +1025,7 @@ pc用メディアend
     width: 350px;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: hidden;
   }
 
   button.menu-toggle {
@@ -1077,6 +1078,16 @@ pc用メディアend
   .wp-block-search__inside-wrapper {
     min-width: 40%;
     width: 380px;
+  }
+
+  .post-toc {
+    width: 70%;
+  }
+
+  .wp-block-image img {
+    width: 90%;
+    height: 50%;
+    margin: auto;
   }
 
   ul.sub-menu {
@@ -1213,11 +1224,10 @@ pc用メディアend
     padding: 0;
     margin-top: 50px;
     text-align: left;
-    position: fixed; /* fixedにすることで画面に固定 */
     top: 60px;
     left: 0;
     background: #3333339f;
-    z-index: 999;
+    z-index: 9999;
     transition: transform 0.5s ease; /* トランスフォームにアニメーションを追加 */
     transform: translateX(-100%); /* 初期状態では画面外に移動 */
   }
@@ -1235,6 +1245,7 @@ pc用メディアend
     margin-right: 20px;
     padding: 20px;
     overflow-x: hidden;
+    width: fit-content;
   }
 
   .drawer-open {
@@ -1317,6 +1328,10 @@ pc用メディアend
   .infotable tr:nth-child(even) {
     background-color: #fff;
     /* 偶数行のバックグラウンドカラーを白に設定 */
+  }
+
+  ul {
+    width: 95%;
   }
 
   /*--------------------フッター-----------------*/
