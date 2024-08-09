@@ -642,7 +642,6 @@ ol {
 
 ul {
   list-style: disc;
-  padding-right: 60px;
 }
 
 ol {
@@ -1124,7 +1123,7 @@ pc用メディアend
     font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     text-align: right;
     text-decoration: none;
-    padding: 10px;
+    padding: 5%;
     margin-top: auto;
   }
 
@@ -1144,14 +1143,44 @@ pc用メディアend
   }
 
   .entry-header h1 {
-    width: 350px;
-    margin-top: 0;
+    width: 90%;
+    margin-top: 30px;
     padding-top: 0;
     margin: auto;
   }
 
   div.entry-meta {
     margin-left: 20px;
+  }
+
+  div.wp-block-buttons {
+    width: 200%;
+    margin-left: -50%;
+  }
+
+  .wp-block-search__inside-wrapper {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .wp-block-search .wp-block-search__label {
+    padding: 5%;
+  }
+
+  .wp-block-categories {
+    margin-top: 18%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .wp-block-latest-posts.wp-block-latest-posts__list {
+    margin-top: 18%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  p.wp-block-tag-cloud a {
+    padding-top: 13%;
   }
 
   /*------------ハンバーガーメニュー-----*/
@@ -1310,9 +1339,14 @@ pc用メディアend
     color: #666;
     font-size: 1.4rem;
     line-height: 2.2;
-    margin-left: 20px;
-    margin-top: 50px;
-    width: 330px;
+    width: 100%;
+    margin-top: 0;
+    padding: 5%;
+    margin: auto;
+  }
+
+  .wp-block-media-text.is-stacked-on-mobile > .wp-block-media-text__content {
+    padding: 0;
   }
 
   div.nav-next {
@@ -1433,9 +1467,9 @@ pc用メディアend
   h2 {
     font-size: 2.5rem;
     width: 90%;
-    margin-top: 0;
     padding-top: 0;
     margin: auto;
+    margin-top: 30px;
   }
 
   h3 {
