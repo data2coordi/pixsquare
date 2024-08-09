@@ -965,7 +965,7 @@ pc用メディアend
     margin: 0;
     padding: 10px;
     position: relative;
-    z-index: 1999;
+    z-index: 999;
   }
 
   p.site-title {
@@ -1017,12 +1017,11 @@ pc用メディアend
   }
 
   .site-main {
-    width: 500px;
+    width: 100%;
   }
 
   body {
-    min-width: 100%;
-    width: 350px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
@@ -1086,7 +1085,15 @@ pc用メディアend
 
   .wp-block-image img {
     width: 90%;
-    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .wp-block-code {
+    width: 90%;
     margin: auto;
   }
 
@@ -1101,11 +1108,11 @@ pc用メディアend
 
   p {
     min-width: 40%;
-    width: 360px;
+    width: 90%;
   }
 
   .create_bread {
-    width: 330px;
+    width: 90%;
   }
 
   span.cat-links {
@@ -1368,6 +1375,8 @@ pc用メディアend
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   #block-2.widget.widget_block.widget_search {
