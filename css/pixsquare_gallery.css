@@ -89,7 +89,7 @@ s .site-main-costum-works .wp-element-caption {
   color: #333;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .createp4 ul#gNavi li a {
     justify-content: left;
   }

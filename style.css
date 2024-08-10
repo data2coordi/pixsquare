@@ -897,10 +897,10 @@ textarea {
   .createp2 ul#gNavi li a {
     margin-top: 3px;
     color: #fff;
-    display: block;
+    display: flex;
     height: 3rem;
     line-height: 3rem;
-    justify-content: left;
+    justify-content: center;
     text-decoration: none;
     width: 100%;
   }
