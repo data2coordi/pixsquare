@@ -75,7 +75,7 @@ pre.wp-block-preformatted {
 
 .createp4 .bl_card_body {
   background-color: #fff;
-  margin-top: -45px;
+  margin-top: -32px;
   padding-top: 45px;
 }
 
@@ -98,7 +98,6 @@ pre.wp-block-preformatted {
 }
 
 .createp4 h2 {
-  margin: 0;
   margin-top: 15px;
   color: #000;
 }
@@ -178,6 +177,7 @@ img.custom-logo {
 .createp4 .pagetop {
   background: #9b3074f7;
   border: solid 2px #73124ff7;
+  margin-top: 0;
 }
 
 .site-main-costum-works .wp-block-image img:hover {
