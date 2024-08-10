@@ -54,6 +54,7 @@ a:hover {
 .createp4 ul#gNavi li a {
   display: flex;
   color: #fff;
+  background-color: #0730b8ff;
 }
 
 #gNavi li ul li ul {
@@ -258,5 +259,9 @@ img.custom-logo {
   .site-main-costum-works .wp-block-image img:focus {
     opacity: 1;
     border: 5px solid #000;
+  }
+
+  .createp4 ul#gNavi li a {
+    background: none;
   }
 }

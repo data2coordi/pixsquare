@@ -178,4 +178,8 @@ img.custom-logo {
     opacity: 1;
     border: 5px solid #7ccb97;
   }
+
+  .createp2 ul#gNavi li a {
+    background: none;
+  }
 }

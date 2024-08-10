@@ -242,4 +242,8 @@ img.custom-logo {
     opacity: 1;
     border: 5px solid #0e212bff;
   }
+
+  .createp3 ul#gNavi li a {
+    background: none;
+  }
 }
