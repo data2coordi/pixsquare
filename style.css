@@ -4,7 +4,7 @@ Theme URI: https://color.toshidayurika.com/theme-download-page/
 Author: Yurika Toshida
 Author URI: https://color.toshidayurika.com
 Description: pixsquare offers a variety of features for creators to effectively display their work and create a professional impression. Creators can express their talents and skills in a more appealing way by leveraging features such as a square image gallery, auto-generated news, and AI captions.
-Version: 1.5.1
+Version: 1.5.2
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
@@ -1031,14 +1031,14 @@ pc用メディアend
     display: none;
   }
 
-  img.wp-image-29 {
+  img.wp-image {
     display: block;
     width: 360px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .wp-block-cover__image-background.wp-image-243 {
+  .wp-block-cover__image-background {
     width: 80%;
     height: auto;
     margin-left: auto;
@@ -1174,6 +1174,7 @@ pc用メディアend
   div.wp-block-buttons {
     width: 200%;
     margin-left: -50%;
+    margin-top: 15px;
   }
 
   .wp-block-search__inside-wrapper {
@@ -1341,6 +1342,17 @@ pc用メディアend
     width: 95%;
   }
 
+  .clearfix {
+    height: 550px;
+    padding-bottom: 100px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
+
+  /* #gNavi {
+    height: 1000px;
+  } */
+
   /*--------------------フッター-----------------*/
   #colophon {
     background-color: #000;
@@ -1392,7 +1404,8 @@ pc用メディアend
     margin-top: 0;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: auto;
   }
 
