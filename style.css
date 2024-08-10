@@ -22,6 +22,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 html {
   margin: 0;
   font-size: 10px;
+  overflow: visible;
 }
 
 body {
@@ -1354,10 +1355,6 @@ pc用メディアend
     overscroll-behavior-y: contain;
   }
 
-  /* #gNavi {
-    height: 1000px;
-  } */
-
   /*--------------------フッター-----------------*/
   #colophon {
     background-color: #000;
@@ -1608,7 +1605,7 @@ pc用メディアend
     align-items: center;
     z-index: 2;
     cursor: pointer;
-    margin-right: 50px;
+    margin-right: -15px;
   }
 
   .pagetop__arrow {

@@ -75,7 +75,7 @@ pre.wp-block-preformatted {
 
 .createp4 .bl_card_body {
   background-color: #fff;
-  margin-top: -32px;
+  margin-top: -45px;
   padding-top: 45px;
 }
 
@@ -104,6 +104,8 @@ pre.wp-block-preformatted {
 
 .createp4 h3 {
   margin: 0;
+  position: relative;
+    left: 2%;
   margin-top: 12px;
   color: #000;
 }
