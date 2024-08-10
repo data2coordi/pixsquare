@@ -182,4 +182,14 @@ img.custom-logo {
   .createp2 ul#gNavi li a {
     background: none;
   }
+
+  .createp2 h2 {
+    margin: auto;
+  }
+
+  .wp-block-buttons
+    > .wp-block-button.has-custom-font-size
+    .wp-block-button__link {
+    margin-top: 20px;
+  }
 }

@@ -894,13 +894,13 @@ textarea {
     z-index: 1000;
   }
 
-  #gNavi li a {
+  .createp2 ul#gNavi li a {
     margin-top: 3px;
     color: #fff;
     display: block;
     height: 3rem;
     line-height: 3rem;
-    text-align: center;
+    justify-content: left;
     text-decoration: none;
     width: 100%;
   }
@@ -1458,7 +1458,7 @@ pc用メディアend
   .bl_card_container {
     background-color: #fff;
     width: 330px;
-    height: 650px;
+    height: 600px;
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
@@ -1481,6 +1481,7 @@ pc用メディアend
   .createp4 .bl_card_body p {
     color: #000;
     width: 300px;
+    padding: 0;
   }
 
   .bl_card_imgWrapper img {
@@ -1561,6 +1562,12 @@ pc用メディアend
     height: 12vw;
     bottom: 0;
     /*下に固定*/
+  }
+
+  span.nav-subtitle {
+    display: block;
+    width: 90%;
+    margin: auto;
   }
 
   .site-main-costum-works .entry-content {
