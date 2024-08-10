@@ -198,7 +198,6 @@ img.custom-logo {
 
   .createp4 .drawer-open span {
     background: #fff;
-    margin-top: 20px;
   }
 
   .createp4 .drawer-open span:before {
@@ -249,11 +248,6 @@ img.custom-logo {
 
   .createp4 .bl_card_body {
     height: 250px;
-  }
-
-  .createp4 .pagetop {
-    background: #9b3074f7;
-    border: solid 2px #73124ff7;
   }
 
   .site-main-costum-works .wp-block-image img:focus {
