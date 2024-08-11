@@ -970,8 +970,6 @@ pc用メディアend
 ****************************************/
 
 @media screen and (max-width: 767px) {
-  
-
   #gNavi.menu.nav-menu {
     list-style: none;
     display: flex;
@@ -1356,6 +1354,10 @@ pc用メディアend
     overscroll-behavior-y: contain;
   }
 
+  /* #gNavi {
+    height: 1000px;
+  } */
+
   /*--------------------フッター-----------------*/
   #colophon {
     background-color: #000;
@@ -1385,7 +1387,7 @@ pc用メディアend
   }
 
   .post-thumbnail img {
-    max-width: 330px;
+    width: 90%;
     height: auto;
     display: block;
     margin-left: auto;
