@@ -970,6 +970,10 @@ pc用メディアend
 ****************************************/
 
 @media screen and (max-width: 767px) {
+  html {
+    overflow: visible;
+  }
+
   #gNavi.menu.nav-menu {
     list-style: none;
     display: flex;
@@ -1035,7 +1039,7 @@ pc用メディアend
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow: visible;
+    overflow-x: hidden;
   }
 
   button.menu-toggle {
