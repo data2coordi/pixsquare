@@ -22,6 +22,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 html {
   margin: 0;
   font-size: 10px;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 body {
@@ -1034,7 +1036,6 @@ pc用メディアend
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: scroll;
   }
 
   button.menu-toggle {
