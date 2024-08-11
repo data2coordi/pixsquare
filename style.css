@@ -22,13 +22,13 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 html {
   margin: 0;
   font-size: 10px;
-  overflow: visible;
 }
 
 body {
   margin: 0;
   width: 960px;
   overflow-x: hidden;
+  overflow: visible;
 }
 
 main {
