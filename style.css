@@ -23,8 +23,8 @@ html {
   margin: 0;
   font-size: 10px;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: auto;
-  overflow-y: scroll;
+  /* -webkit-overflow-scrolling: auto;
+  overflow-y: scroll; */
 }
 
 body {
