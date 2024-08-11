@@ -1036,7 +1036,7 @@ pc用メディアend
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow: visible;
   }
 
   button.menu-toggle {
