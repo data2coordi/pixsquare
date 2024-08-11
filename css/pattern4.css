@@ -105,7 +105,7 @@ pre.wp-block-preformatted {
 .createp4 h3 {
   margin: 0;
   position: relative;
-    left: 2%;
+  left: 2%;
   margin-top: 12px;
   color: #000;
 }
@@ -195,7 +195,7 @@ img.custom-logo {
 
   .createp4 ul#gNavi {
     background-color: #1137ba9f;
-    width: 200px;
+    width: 380px;
   }
 
   .createp4 .drawer-open span {

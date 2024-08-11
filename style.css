@@ -977,6 +977,7 @@ pc用メディアend
     display: flex;
     margin: 0;
     padding: 10px;
+    width: 100%;
     position: relative;
     z-index: 999;
   }
