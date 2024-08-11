@@ -1353,7 +1353,7 @@ pc用メディアend
     height: 550px;
     padding-bottom: 100px;
     overflow-y: auto;
-    overscroll-behavior-y: contain;
+    overscroll-behavior-y: auto;
   }
 
   /* #gNavi {
