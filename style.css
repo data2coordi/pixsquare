@@ -27,7 +27,6 @@ html {
 body {
   margin: 0;
   width: 960px;
-  overflow-x: hidden;
 }
 
 main {
@@ -1035,7 +1034,6 @@ pc用メディアend
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: hidden;
     overflow: visible;
   }
 
@@ -1258,7 +1256,6 @@ pc用メディアend
     margin: 0;
     margin-right: 20px;
     padding: 20px;
-    overflow-x: hidden;
     width: fit-content;
   }
 
