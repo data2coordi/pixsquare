@@ -28,7 +28,6 @@ body {
   margin: 0;
   width: 960px;
   overflow-x: hidden;
-  overflow: visible;
 }
 
 main {
@@ -1037,6 +1036,7 @@ pc用メディアend
     margin-left: auto;
     margin-right: auto;
     overflow-x: hidden;
+    overflow: visible;
   }
 
   button.menu-toggle {
