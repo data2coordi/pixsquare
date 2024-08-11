@@ -970,9 +970,7 @@ pc用メディアend
 ****************************************/
 
 @media screen and (max-width: 767px) {
-  main {
-    overflow-y: auto;
-  }
+  
 
   #gNavi.menu.nav-menu {
     list-style: none;
