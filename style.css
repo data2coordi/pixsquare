@@ -1039,8 +1039,7 @@ pc用メディアend
 
   .site {
     overflow-x: hidden;
-    overflow-scrolling : touch;
-    overflow-y: visible;
+    overflow-y: auto;
   }
 
   button.menu-toggle {
