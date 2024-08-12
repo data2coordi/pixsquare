@@ -1352,8 +1352,8 @@ pc用メディアend
   .clearfix {
     height: 100vh;
     padding-bottom: 100px;
-    /* overflow-y: auto;
-    overscroll-behavior-y: contain; */
+    overflow-y: auto;
+    /* overscroll-behavior-y: contain; */
   }
 
   /* #gNavi {
