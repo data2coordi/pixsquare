@@ -1039,7 +1039,6 @@ pc用メディアend
 
   .site {
     overflow: hidden;
-    transform: translateZ(0);
   }
 
   button.menu-toggle {
@@ -1355,6 +1354,7 @@ pc用メディアend
     padding-bottom: 100px;
     overflow-y: auto;
     overscroll-behavior-y: contain;
+    transform: translateZ(0);
   }
 
   /* #gNavi {
