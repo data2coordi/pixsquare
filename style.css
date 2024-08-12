@@ -1044,10 +1044,10 @@ pc用メディアend
     position: relative; */
   }
 
-  .site {
+  /* .site {
     overflow-x: hidden;
-    /* height: auto; */
-  }
+    height: auto;
+  } */
 
   button.menu-toggle {
     display: none;
