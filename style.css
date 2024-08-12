@@ -1035,8 +1035,7 @@ pc用メディアend
   }
 
   body {
-    width: 100%;
-    height: auto;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
