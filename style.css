@@ -1039,7 +1039,7 @@ pc用メディアend
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
-    overflow: hidden;
+    overflow-y: auto;
     /* overflow-y: auto;
     position: relative; */
   }
