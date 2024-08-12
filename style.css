@@ -1039,7 +1039,7 @@ pc用メディアend
 
   .site {
     overflow-x: hidden;
-    height: 100vh;
+    height: 100%;
   }
 
   button.menu-toggle {
