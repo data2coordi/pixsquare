@@ -1354,7 +1354,6 @@ pc用メディアend
     padding-bottom: 100px;
     overflow-y: auto;
     overscroll-behavior-y: contain;
-    transform: translateZ(0);
   }
 
   /* #gNavi {
