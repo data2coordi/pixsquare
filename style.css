@@ -988,9 +988,8 @@ pc用メディアend
   }
 
   main {
-    max-width: 100%;
-    width: 380px;
-    height: 100%;
+    width: 90%;
+    height: auto;
     padding-bottom: 50px;
     background: #fff;
   }
@@ -1039,7 +1038,7 @@ pc用メディアend
 
   .site {
     overflow-x: hidden;
-    height: auto;
+    /* height: auto; */
   }
 
   button.menu-toggle {
