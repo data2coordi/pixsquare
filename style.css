@@ -1039,6 +1039,7 @@ pc用メディアend
 
   .site {
     overflow: hidden;
+    transform: translateZ(0);
   }
 
   button.menu-toggle {
