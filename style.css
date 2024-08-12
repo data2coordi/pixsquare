@@ -1040,7 +1040,7 @@ pc用メディアend
     margin-left: auto;
     margin-right: auto;
     overflow-y: auto;
-    /* position: relative; */
+    position: fixed;
   }
 
   .site {
@@ -1358,9 +1358,8 @@ pc用メディアend
 
   .clearfix {
     height: 100vh;
-    padding-bottom: 100px;
     overflow-y: auto;
-    overscroll-behavior-y: none;
+    overscroll-behavior-y: contain;
   }
 
   /* #gNavi {
