@@ -1039,8 +1039,10 @@ pc用メディアend
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: auto;
-    position: relative;
+    height: 100%;
+    overflow: hidden;
+    /* overflow-y: auto;
+    position: relative; */
   }
 
   .site {
@@ -1357,10 +1359,11 @@ pc用メディアend
   }
 
   .clearfix {
-    height: 100vh;
-    /* padding-bottom: 100px; */
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
+    height: 100%;
+    overflow: scroll;
+    padding-bottom: 100px;
+    /* overflow-y: auto;
+    overscroll-behavior-y: contain; */
   }
 
   /* #gNavi {
