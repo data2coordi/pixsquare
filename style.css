@@ -1043,6 +1043,8 @@ pc用メディアend
 
   .site {
     overflow-x: hidden;
+    position: relative;
+    z-index: 99;
     /* height: auto; */
   }
 
