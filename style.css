@@ -994,6 +994,10 @@ pc用メディアend
     background: #fff;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   #gNavi.menu.nav-menu.active {
     left: 0%;
   }
@@ -1034,7 +1038,7 @@ pc用メディアend
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   .site {
