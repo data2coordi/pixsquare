@@ -997,6 +997,9 @@ pc用メディアend
   html {
     scroll-behavior: smooth;
   }
+  img {
+    width: 100%;
+  }
 
   #gNavi.menu.nav-menu.active {
     left: 0%;
@@ -1044,10 +1047,10 @@ pc用メディアend
     position: relative; */
   }
 
-  /* .site {
+  .site {
     overflow-x: hidden;
     height: auto;
-  } */
+  }
 
   button.menu-toggle {
     display: none;
@@ -1542,7 +1545,9 @@ pc用メディアend
   h1 {
     display: block;
     font-size: 3rem;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h2 {
@@ -1555,7 +1560,8 @@ pc用メディアend
 
   h3 {
     font-size: 2rem;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
 
   h4,
@@ -1687,34 +1693,4 @@ div.entry-content {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* アニメーションスタートの遅延時間を決めるCSS*/
-
-img.wp-image-78 {
-  animation-delay: 0.2s;
-}
-
-img.wp-image-79 {
-  animation-delay: 0.3s;
-}
-
-img.wp-image-81 {
-  animation-delay: 0.4s;
-}
-
-img.wp-image-105 {
-  animation-delay: 0.5s;
-}
-
-img.wp-image-87 {
-  animation-delay: 0.6s;
-}
-
-img.wp-image-89 {
-  animation-delay: 0.7s;
-}
-
-img.wp-image-93 {
-  animation-delay: 0.8s;
 }
