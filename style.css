@@ -1043,6 +1043,7 @@ pc用メディアend
     margin-right: auto;
     height: 100vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     /* overflow-y: auto;
     position: relative; */
   }
