@@ -70,7 +70,7 @@ a:focus {
 
 span.nav-title {
   display: block;
-  width: 90%;
+  width: auto;
   margin: auto;
 }
 
@@ -172,6 +172,10 @@ hr {
 
 li {
   list-style: none;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 pre {
@@ -604,7 +608,7 @@ i {
 }
 
 blockquote {
-  margin: 0 1.5rem;
+  margin: 0 0;
 }
 
 address {
@@ -985,6 +989,7 @@ pc用メディアend
     margin: 0;
     padding: 10px;
     width: 100%;
+    height: auto;
     position: relative;
     z-index: 999;
   }
@@ -1157,7 +1162,7 @@ pc用メディアend
   }
 
   .create_bread {
-    width: 90%;
+    width: 50%;
   }
 
   span.cat-links {
@@ -1565,8 +1570,8 @@ pc用メディアend
   a {
     color: #666;
     text-align: left;
-    display: block;
-    width: 90%;
+    display: inline-block;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1612,7 +1617,7 @@ pc用メディアend
 
   span.nav-subtitle {
     display: block;
-    width: 90%;
+    width: auto;
     margin: auto;
   }
 

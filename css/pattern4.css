@@ -98,15 +98,15 @@ pre.wp-block-preformatted {
 }
 
 .createp4 h2 {
-  margin-top: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   color: #000;
 }
 
 .createp4 h3 {
   margin: 0;
   position: relative;
-  left: 2%;
-  margin-top: 12px;
+  margin-top: 50px;
   color: #000;
 }
 
