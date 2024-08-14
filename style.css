@@ -1039,7 +1039,7 @@ pc用メディアend
   }
 
   body {
-    width: 100vw;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
