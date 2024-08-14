@@ -1276,7 +1276,6 @@ pc用メディアend
     padding-top: 0;
     margin-top: -10px;
   }
-  }
 
   /*------------ハンバーガーメニュー-----*/
   .menu {
@@ -1287,7 +1286,6 @@ pc用メディアend
     text-align: left;
     top: 60px;
     left: 0;
-    background: #333333;
     z-index: 9999;
     transition: transform 0.5s ease; /* トランスフォームにアニメーションを追加 */
     transform: translateX(-100%); /* 初期状態では画面外に移動 */
@@ -1608,14 +1606,13 @@ pc用メディアend
     margin: auto;
   }
 
-  #colophon.site-footer {
+  /* #colophon.site-footer {
     font-size: 0.8rem;
     max-width: 100%;
     width: 450px;
     height: 12vw;
     bottom: 0;
-    /*下に固定*/
-  }
+  } */
 
   span.nav-subtitle {
     display: block;
@@ -1679,54 +1676,54 @@ pc用メディアend
       border-color: #646566;
     }
   }
-}
 
-/* アニメーション */
+  /* アニメーション */
 
-img.wp-image {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-img.wp-content {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.attachment-post-thumbnail {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-.infotable,
-.bl_card_container {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-div.entry-content {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUpAnime {
-  from {
+  img.wp-image {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
     opacity: 0;
-    transform: translateY(100px);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  img.wp-content {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  .attachment-post-thumbnail {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  .infotable,
+  .bl_card_container {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  div.entry-content {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

@@ -69,7 +69,8 @@ html {
   /* 4列と10pxのギャップ */
   margin-bottom: 10px;
 }
-s .site-main-costum-works .wp-element-caption {
+
+.site-main-costum-works .wp-element-caption {
   font-size: 1.2rem;
 }
 
