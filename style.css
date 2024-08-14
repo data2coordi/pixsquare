@@ -1277,7 +1277,7 @@ pc用メディアend
     text-align: left;
     top: 60px;
     left: 0;
-    background: #3333339f;
+    background: #333333;
     z-index: 9999;
     transition: transform 0.5s ease; /* トランスフォームにアニメーションを追加 */
     transform: translateX(-100%); /* 初期状態では画面外に移動 */
