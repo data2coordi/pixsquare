@@ -1386,7 +1386,7 @@ pc用メディアend
 
   .clearfix {
     height: 100vh;
-    overflow: scroll;
+    /* overflow: scroll; */
     padding-bottom: 200px;
     /* overflow-y: auto;
     overscroll-behavior-y: contain; */
@@ -1401,7 +1401,7 @@ pc用メディアend
     background-color: #000;
     color: #fff;
     padding-bottom: 20px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     max-width: 100%;
