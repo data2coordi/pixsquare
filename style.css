@@ -530,7 +530,7 @@ ul.create_bread {
   content: ">";
   margin: 0 0.6rem;
   /* 記号の左右の余白 */
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 /*------------目次---------------*/
