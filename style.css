@@ -996,6 +996,7 @@ pc用メディアend
 
   html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
   }
   img {
     width: 100%;
