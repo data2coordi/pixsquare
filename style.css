@@ -997,11 +997,15 @@ pc用メディアend
     text-align: center;
   }
 
-  main {
+  /* main {
     width: 90%;
     height: auto;
     padding-bottom: 50px;
     background: #fff;
+  } */
+
+  main {
+    width: 100%;
   }
 
   html {
@@ -1047,16 +1051,25 @@ pc用メディアend
     width: 100%;
   }
 
+  img.attachment-post-thumbnail {
+    width: 100%;
+    height: auto;
+  }
+
   body {
+    width: 100%;
+    overflow-x: hidden; /* 横スクロールを無効にする */
+  }
+
+  /* body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: 100vh;
     overflow-y: auto;
-    /* -webkit-overflow-scrolling: touch; */
-    /* overflow-y: auto;
-    position: relative; */
-  }
+    -webkit-overflow-scrolling: touch;
+    position: relative; 
+  }  */
 
   .site {
     overflow-x: hidden;
