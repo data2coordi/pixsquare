@@ -22,22 +22,31 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 html {
   margin: 0;
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
   width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  overflow-x: hidden; /* 横スクロールを無効にする */
 }
 
 main {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   display: block;
   padding-bottom: 100px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .site-main {
   margin-top: 20px;
+  width: 100%;
 }
 
 /* underline */
