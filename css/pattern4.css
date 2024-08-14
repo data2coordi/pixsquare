@@ -25,7 +25,7 @@ a:hover {
 }
 
 .createp4 .site-header {
-  background-color: #0730b8ff;
+  background-color: #0730b8;
   margin: 0 calc(50% - 50vw);
   width: 100vw;
   height: 220px;
@@ -54,7 +54,7 @@ a:hover {
 .createp4 ul#gNavi li a {
   display: flex;
   color: #fff;
-  background-color: #0730b8ff;
+  background-color: #0730b8;
 }
 
 #gNavi li ul li ul {

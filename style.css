@@ -1274,6 +1274,8 @@ pc用メディアend
 
   .comment-form p.form-submit {
     padding-top: 0;
+    margin-top: -10px;
+  }
   }
 
   /*------------ハンバーガーメニュー-----*/
