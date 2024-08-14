@@ -996,8 +996,8 @@ pc用メディアend
 
   html {
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
   }
+
   img {
     width: 100%;
   }
@@ -1010,7 +1010,6 @@ pc用メディアend
     background: none;
     text-align: left;
     display: block;
-    width: 200px;
   }
 
   #gNavi a {
