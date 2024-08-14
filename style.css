@@ -526,7 +526,7 @@ ul.create_bread {
   width: 40%;
 }
 
-.create_bread li:not(:last-of-type)::after {
+ul.create_bread li:not(:last-of-type)::after {
   content: ">";
   margin: 0 0.6rem;
   /* 記号の左右の余白 */
