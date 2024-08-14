@@ -1232,6 +1232,8 @@ pc用メディアend
 
   .wp-block-categories {
     width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .wp-block-latest-posts.wp-block-latest-posts__list {
@@ -1446,8 +1448,6 @@ pc用メディアend
     width: 90%;
     text-align: left;
     margin-top: 0;
-    padding-left: 5%;
-    padding-right: 5%;
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
@@ -1564,6 +1564,10 @@ pc用メディアend
   a {
     color: #666;
     text-align: left;
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   h1 {
