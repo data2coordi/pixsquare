@@ -1326,6 +1326,7 @@ pc用メディアend
     background: #fff;
     transition: 0.5s;
     position: absolute;
+    z-index: 9999;
   }
 
   .drawer-open span:before {
@@ -1606,13 +1607,12 @@ pc用メディアend
     margin: auto;
   }
 
-  /* #colophon.site-footer {
+  #colophon.site-footer {
     font-size: 0.8rem;
-    max-width: 100%;
-    width: 450px;
+    width: 100%;
     height: 12vw;
     bottom: 0;
-  } */
+  }
 
   span.nav-subtitle {
     display: block;
