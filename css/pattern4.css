@@ -94,7 +94,7 @@ pre.wp-block-preformatted {
 }
 
 .createp4 h1::first-letter {
-  color: #73124ff7;
+  color: #73124f;
 }
 
 .createp4 h2 {
@@ -111,7 +111,7 @@ pre.wp-block-preformatted {
 }
 
 .createp4 h2::first-letter {
-  color: #73124ff7;
+  color: #73124f;
 }
 
 img.custom-logo {
@@ -178,7 +178,7 @@ img.custom-logo {
 
 .createp4 .pagetop {
   background: #9b3074f7;
-  border: solid 2px #73124ff7;
+  border: solid 2px #73124f;
   margin-top: 0;
 }
 
