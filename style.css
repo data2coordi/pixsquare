@@ -408,12 +408,12 @@ textarea {
   position: relative;
 }
 
-.site-branding {
+/* .site-branding {
   margin-top: 20px;
   width: 40%;
   height: 60px;
   font-size: 1.3rem;
-}
+} */
 
 .infotable {
   width: 800px;

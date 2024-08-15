@@ -54,6 +54,12 @@ img.custom-logo {
   z-index: 99;
 }
 
+.createp1 .site-branding {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 767px) {
   .site-main-costum-works .wp-block-image img:focus {
     opacity: 1;
