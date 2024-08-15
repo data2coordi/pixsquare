@@ -1042,6 +1042,7 @@ pc用メディアend
 
   #gNavi.menu.nav-menu.active {
     left: 0%;
+    margin-top: -30px;
   }
 
   #gNavi li a {
@@ -1502,6 +1503,7 @@ pc用メディアend
     padding-bottom: 10px;
     margin: auto;
     margin-left: 50px;
+    margin-top: -10px;
   }
 
   .wp-block-media-text.is-stacked-on-mobile > .wp-block-media-text__content {
