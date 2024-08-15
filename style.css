@@ -1063,6 +1063,11 @@ pc用メディアend
     margin-right: auto;
   }
 
+  a.custom-logo-link {
+    position: relative;
+    z-index: 99;
+  }
+
   .site-main {
     width: 100%;
   }
