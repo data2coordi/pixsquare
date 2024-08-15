@@ -1112,6 +1112,14 @@ pc用メディアend
     display: none;
   }
 
+  p.bl_card_txt {
+    text-align: left;
+  }
+
+  .site-branding > .site-title {
+    margin-top: 30px;
+  }
+
   img.wp-image {
     display: block;
     width: 360px;
