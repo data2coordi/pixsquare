@@ -1064,6 +1064,11 @@ pc用メディアend
     z-index: 99;
   }
 
+  .wp-block-quote {
+    position: relative;
+    left: 5%;
+  }
+
   a.custom-logo-link {
     position: relative;
     z-index: 99;
