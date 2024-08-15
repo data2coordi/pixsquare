@@ -1061,6 +1061,7 @@ pc用メディアend
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    z-index: 99;
   }
 
   a.custom-logo-link {
