@@ -16,15 +16,6 @@ html {
   line-height: 0;
 }
 
-/* .createp3 label.drawer-open {
-  display: inline-block;
-  top: 20px;
-} */
-
-/*div.drawer-open{
-  margin: 0;
-} */
-
 .createp3 .site-header {
   background-color: #344135ff;
   margin: 0 calc(50% - 50vw);
@@ -62,10 +53,6 @@ img.custom-logo {
   background: #344135ff;
   color: #fff;
 }
-
-/* #gNavi li ul li ul {
-  left: 95%;
-} */
 
 .createp3 ul#gNavi li a:hover {
   color: #fff;
@@ -151,7 +138,6 @@ img.custom-logo {
 .createp3 .infotable {
   border-collapse: collapse;
   margin-top: 20px;
-  /* 必要に応じて調整 */
 }
 
 .createp3 .infotable th {
@@ -168,7 +154,6 @@ img.custom-logo {
 
 .createp3 .infotable tr:nth-child(even) {
   background-color: #fff;
-  /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
 .createp3 .site-title > a {
@@ -221,10 +206,6 @@ img.custom-logo {
     width: 420px;
     margin-left: 15px;
   }
-
-  /* div.drawer {
-    left: -20px;
-  } */
 
   .createp3 #masthead {
     margin-top: -20px;
