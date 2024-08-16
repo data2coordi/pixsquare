@@ -1042,7 +1042,7 @@ pc用メディアend
 
   #gNavi.menu.nav-menu.active {
     left: 0%;
-    margin-top: -30px;
+    margin-top: -60px;
   }
 
   #gNavi li a {
@@ -1489,8 +1489,9 @@ pc用メディアend
   }
 
   #block-2.widget.widget_block.widget_search {
-    margin-left: 20px;
-    width: 330px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .createp4 p {
@@ -1511,7 +1512,7 @@ pc用メディアend
   }
 
   .bl_card_body > a {
-    text-align: left;
+    margin-left: 0;
   }
 
   .wp-block-media-text.is-stacked-on-mobile > .wp-block-media-text__content {
