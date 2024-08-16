@@ -31,7 +31,6 @@ html {
   width: 100vw;
   height: 220px;
   padding-top: 50px;
-  margin-top: -20px;
   align-items: start;
   color: #fff;
 }
@@ -43,7 +42,7 @@ html {
 }
 
 .createp3 p {
-  color: #333;
+  color: #888;
   font-size: 1.4rem;
   line-height: 2.2;
 }
