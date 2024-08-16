@@ -2,10 +2,6 @@ html {
   font-size: 10px;
 }
 
-/* * {
-    outline: dashed;
-} */
-
 /* site-main-costum-worksのスタイル */
 .site-main-costum-works .entry-content {
   display: flex;
@@ -17,7 +13,6 @@ html {
 
 .site-main-costum-works .entry-content figure {
   flex-basis: calc(25% - 10px);
-  /* 4列と10pxのギャップ */
   margin-bottom: 5px;
 }
 
@@ -59,14 +54,12 @@ html {
 .site-main-costum-works {
   display: flex;
   flex-wrap: wrap;
-  /* flex-basis: 960px; */
   gap: 10px;
   margin-top: 50px;
 }
 
 .site-main-costum-works .entry-content figure {
   flex-basis: calc(25% - 10px);
-  /* 4列と10pxのギャップ */
   margin-bottom: 10px;
 }
 
