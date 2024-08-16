@@ -159,11 +159,11 @@ img.custom-logo {
   z-index: 99;
 }
 
-.createp2.site-title {
+.createp2 .site-title {
   margin-top: 30px;
 }
 
-.createp2 .site-branding {
+.createp2 p.site-branding {
   width: 960px;
   margin-left: auto;
   margin-right: auto;
