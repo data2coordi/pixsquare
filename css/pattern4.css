@@ -153,7 +153,6 @@ img.custom-logo {
 .createp4 .infotable {
   border-collapse: collapse;
   margin-top: 20px;
-  /* 必要に応じて調整 */
 }
 
 .createp4 .infotable th {
@@ -170,7 +169,6 @@ img.custom-logo {
 
 .createp4 .infotable tr:nth-child(even) {
   background-color: #fff;
-  /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
 .createp4 .site-title > a {
@@ -225,10 +223,6 @@ img.custom-logo {
     margin-left: 15px;
     color: #fff;
   }
-
-  /* div.drawer {
-    left: -20px;
-  } */
 
   .createp4 #masthead {
     margin-top: -20px;
