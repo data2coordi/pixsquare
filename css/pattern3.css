@@ -84,6 +84,15 @@ img.custom-logo {
   text-align: left;
 }
 
+.createp3 p.site-title {
+  margin-top: 30px;
+  width: 960px;
+}
+
+.createp3 p.site-description {
+  width: 960px;
+}
+
 .createp3 a {
   color: #0e212bf7;
   font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana,

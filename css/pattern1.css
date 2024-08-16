@@ -60,6 +60,15 @@ img.custom-logo {
   margin-right: auto;
 }
 
+.createp1 p.site-title {
+  margin-top: 30px;
+  width: 960px;
+}
+
+.createp1 p.site-description {
+  width: 960px;
+}
+
 @media screen and (max-width: 767px) {
   .site-main-costum-works .wp-block-image img:focus {
     opacity: 1;

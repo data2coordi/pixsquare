@@ -110,6 +110,15 @@ pre.wp-block-preformatted {
   color: #000;
 }
 
+.createp4 p.site-title {
+  margin-top: 30px;
+  width: 960px;
+}
+
+.createp4 p.site-description {
+  width: 960px;
+}
+
 .createp4 h2::first-letter {
   color: #73124f;
 }
