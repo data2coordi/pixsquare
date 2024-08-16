@@ -272,17 +272,6 @@ textarea {
   margin: 0;
 }
 
-/* header {
-	width: 100%;
-	display: flex;
-	background: #fff;
-} */
-
-/* .vk-mobile-nav-menu-btn {
-	left: initial;
-	right: 5px;
-} */
-
 .vk-mobile-nav-menu-btn {
   right: 5px;
   left: inherit;
@@ -340,10 +329,6 @@ progress {
   vertical-align: baseline;
 }
 
-/* textarea {
-  overflow: auto;
-} */
-
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -378,10 +363,6 @@ summary {
   display: list-item;
 }
 
-/* the correct display in IE 10+. template {
-	display: none;
-} */
-
 [hidden] {
   display: none;
 }
@@ -414,18 +395,10 @@ textarea {
   position: relative;
 }
 
-/* .site-branding {
-  margin-top: 20px;
-  width: 40%;
-  height: 60px;
-  font-size: 1.3rem;
-} */
-
 .infotable {
   width: 800px;
   border-collapse: collapse;
   margin-top: 20px;
-  /* 必要に応じて調整 */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
@@ -446,7 +419,6 @@ textarea {
 
 .infotable tr:nth-child(even) {
   background-color: #fff;
-  /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
 /* カード全体に対するスタイル */
@@ -503,9 +475,7 @@ textarea {
 /* widget-areaのスタイル */
 #secondary.widget-area {
   order: 1;
-  /* Flexboxの順序を1に設定 */
   width: 100%;
-  /* 幅を100%に設定 */
   padding-bottom: 100px;
   background-color: #fff;
 }
@@ -761,16 +731,6 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
-/* button:active,
-button:focus,
-input[type="button"]:active,
-input[type="button"]:focus,
-input[type="reset"]:active,
-input[type="reset"]:focus,
-input[type="submit"]:active,
-input[type="submit"]:focus {
-} */
-
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1021,13 +981,6 @@ pc用メディアend
     text-align: center;
   }
 
-  /* main {
-    width: 90%;
-    height: auto;
-    padding-bottom: 50px;
-    background: #fff;
-  } */
-
   main {
     width: 100%;
   }
@@ -1099,16 +1052,6 @@ pc用メディアend
     width: 100%;
     overflow-x: hidden; /* 横スクロールを無効にする */
   }
-
-  /* body {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative; 
-  }  */
 
   .site {
     overflow-x: hidden;
@@ -1441,15 +1384,9 @@ pc用メディアend
 
   .clearfix {
     height: 100vh;
-    /* overflow: scroll; */
     padding-bottom: 200px;
-    /* overflow-y: auto;
-    overscroll-behavior-y: contain; */
   }
 
-  /* #gNavi {
-    height: 1000px;
-  } */
 
   /*--------------------パンくず-----------------*/
   ul.create_bread {
@@ -1577,7 +1514,6 @@ pc用メディアend
   .bl_card_imgWrapper {
     width: 400px;
     height: auto;
-    /* overflow: hidden; */
   }
 
   .createp4 .bl_card_body {
