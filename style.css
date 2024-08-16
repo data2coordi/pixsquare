@@ -1128,6 +1128,10 @@ pc用メディアend
     margin-left: 60px;
   }
 
+  pre.wp-block-preformatted {
+    width: 90%;
+  }
+
   img.wp-image {
     display: block;
     width: 360px;
@@ -1350,7 +1354,7 @@ pc用メディアend
 
   .drawer-open {
     display: flex;
-    margin-top: -67px;
+    margin-top: -27px;
     margin-left: 20px;
     cursor: pointer;
     position: relative;
