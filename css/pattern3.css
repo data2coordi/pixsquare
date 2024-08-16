@@ -76,9 +76,12 @@ img.custom-logo {
 }
 
 .createp3 .bl_card_body {
-  background-color: #f1f5ef;
   margin-top: -45px;
   padding-top: 45px;
+}
+
+.createp3 .bl_card_txt {
+  text-align: left;
 }
 
 .createp3 a {
