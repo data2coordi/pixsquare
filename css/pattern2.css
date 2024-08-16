@@ -72,6 +72,7 @@ html {
 
 .createp2 #gNavi {
   background-color: #ff9050;
+  margin-top: 90px;
 }
 
 #gNavi li ul li ul {
@@ -161,6 +162,11 @@ img.custom-logo {
 
 .createp2 p.site-title {
   margin-top: 30px;
+  width: 960px;
+}
+
+.createp2 p.site-description {
+  width: 960px;
 }
 
 .createp2 p.site-branding {
