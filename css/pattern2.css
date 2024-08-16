@@ -113,7 +113,6 @@ html {
 .createp2 .infotable {
   border-collapse: collapse;
   margin-top: 20px;
-  /* 必要に応じて調整 */
 }
 
 .createp2 .infotable th,
@@ -129,7 +128,6 @@ html {
 
 .createp2 .infotable tr:nth-child(even) {
   background-color: #ffffff;
-  /* 偶数行のバックグラウンドカラーを白に設定 */
 }
 
 .site-main-costum-works .wp-block-image img:hover {
