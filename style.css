@@ -931,16 +931,17 @@ textarea {
     overflow: visible;
   }
 
-  .sub-menu ul.focused {
-    height: auto;
-    overflow: visible;
-  }
-
   #gNavi li ul li ul {
     position: absolute;
     top: -3px;
     width: 100%;
   }
+
+  /* テスト中 */
+  /* テスト中 */
+  /* テスト中 */
+  /* テスト中 */
+  /* テスト中 */
 
   /*-----------エントランスの原因----------------*/
   figure.wp-block-gallery.has-nested-images.is-cropped img {
