@@ -68,10 +68,14 @@ a:focus {
   color: #222;
 }
 
-ul#gNavi:hover > .dropDown,
+/* #gNavi li li.focused {
+  overflow: visible;
+} */
+
+/* ul#gNavi:hover > .dropDown,
 ul#gNavi:focus-within > .dropDown {
   display: block;
-}
+} */
 
 span.nav-title {
   display: block;
@@ -706,7 +710,7 @@ a:active {
 }
 
 a:focus {
-  outline: thin dotted;
+  outline: 1px solid;
 }
 
 a:hover,
@@ -886,7 +890,11 @@ textarea {
     z-index: 1000;
   }
 
-  .createp2 ul#gNavi li a {
+  .createp1 #gNavi {
+    margin-top: 70px;
+  }
+
+  ul#gNavi li a {
     margin-top: 3px;
     color: #fff;
     display: flex;
@@ -903,7 +911,7 @@ textarea {
   }
 
   #gNavi > li {
-    width: 25%;
+    width: 15%;
   }
 
   #gNavi li {
@@ -920,6 +928,11 @@ textarea {
 
   #gNavi li:hover > ul > li {
     height: 3rem;
+    overflow: visible;
+  }
+
+  .sub-menu ul.focused {
+    height: auto;
     overflow: visible;
   }
 
@@ -1386,7 +1399,6 @@ pc用メディアend
     height: 100vh;
     padding-bottom: 200px;
   }
-
 
   /*--------------------パンくず-----------------*/
   ul.create_bread {
