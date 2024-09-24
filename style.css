@@ -77,6 +77,21 @@ ul#gNavi:focus-within > .dropDown {
   display: block;
 } */
 
+/* @@@@@ */
+/*
+.nav-menu .menu-item:hover ul,
+.nav-menu .sub-menu.focused li   {
+  overflow: visible !important;
+  background-color: red;
+  height:3rem !important;;
+
+}
+.navi-menu .menu-item li a:hover,
+.navi-menu .menu-item li a:focus {
+  background: #0090aa;
+}
+  */
+
 span.nav-title {
   display: block;
   width: auto;
@@ -508,7 +523,7 @@ ul.create_bread {
   margin: 0;
   margin-bottom: 50px;
   margin-left: 20px;
-  width: 40%;
+  width: 25%;
 }
 
 ul.create_bread li:not(:last-of-type)::after {
@@ -817,6 +832,11 @@ textarea {
   margin-top: -30px;
 }
 
+a.custom-logo-link {
+  color: transparent;
+  background: none;
+}
+
 #colophon {
   background-color: #000;
   color: #fff;
@@ -926,6 +946,7 @@ textarea {
     width: 200px;
   }
 
+  #gNavi .sub-menu.focused > li,
   #gNavi li:hover > ul > li {
     height: 3rem;
     overflow: visible;
@@ -1009,7 +1030,6 @@ pc用メディアend
 
   #gNavi.menu.nav-menu.active {
     left: 0%;
-    margin-top: -60px;
   }
 
   #gNavi li a {
@@ -1039,7 +1059,6 @@ pc用メディアend
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    z-index: 99;
   }
 
   .wp-block-quote {
@@ -1205,7 +1224,6 @@ pc用メディアend
   }
 
   a:visited {
-    width: 100%;
     color: #888;
     font-weight: bold;
     font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial,
@@ -1329,7 +1347,6 @@ pc用メディアend
     background: #fff;
     transition: 0.5s;
     position: absolute;
-    z-index: 9999;
   }
 
   .drawer-open span:before {
@@ -1403,7 +1420,7 @@ pc用メディアend
 
   /*--------------------パンくず-----------------*/
   ul.create_bread {
-    width: 70%;
+    width: 50%;
   }
 
   /*--------------------フッター-----------------*/
@@ -1504,7 +1521,7 @@ pc用メディアend
     width: 100%;
   }
 
-  .site-branding {
+  .createp1 .site-branding {
     width: 100%;
     font-size: 0.7rem;
     text-align: center;
@@ -1581,7 +1598,7 @@ pc用メディアend
   a {
     color: #666;
     text-align: left;
-    display: inline-block;
+
     width: auto;
     margin-left: auto;
     margin-right: auto;

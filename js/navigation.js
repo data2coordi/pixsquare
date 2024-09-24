@@ -104,33 +104,28 @@
 /*ナビゲーションのキーボード操作*/
 /*関係するクラスセレクタ:pixsquare-menu-item*/
 /******************************************** */
+// メニューアイテムのフォーカス処理
+function handleMenuItemFocus() {
+  $(this).siblings('.sub-menu').addClass('focused');
+}
+
+function handleMenuItemBlur() {
+  $(this).siblings('.sub-menu').removeClass('focused');
+}
+
+// サブメニューのフォーカス処理
+function handleSubMenuFocus() {
+  $(this).parents('.sub-menu').addClass('focused');
+}
+
+function handleSubMenuBlur() {
+  $(this).parents('.sub-menu').removeClass('focused');
+}
+
 $(function() {
-  $('.menu-item a').focus( function () {
-    $(this).siblings('.sub-menu').addClass('focused');
-  }).blur(function(){
-    $(this).siblings('.sub-menu').removeClass('focused');
-  });
- 
-// サブメニュー用
-  $('.sub-menu a').focus( function () {
-    $(this).parents('.sub-menu').addClass('focused');
-  }).blur(function(){
-    $(this).parents('.sub-menu').removeClass('focused');
-  });
+  // メニューアイテムのフォーカス・ブラーイベント
+  $('.menu-item a').focus(handleMenuItemFocus).blur(handleMenuItemBlur);
+
+  // サブメニューのフォーカス・ブラーイベント
+  $('.sub-menu a').focus(handleSubMenuFocus).blur(handleSubMenuBlur);
 });
-/*
-$(function() {
-  $('.menu-item-has-children a').focus( function () {
-    $(this).siblings('.sub-menu').addClass('focused');
-  }).blur(function(){
-    $(this).siblings('.sub-menu').removeClass('focused');
-  });
- 
-// サブメニュー用
-  $('.sub-menu a').focus( function () {
-    $(this).parents('.sub-menu').addClass('focused');
-  }).blur(function(){
-    $(this).parents('.sub-menu').removeClass('focused');
-  });
-});
-*/
