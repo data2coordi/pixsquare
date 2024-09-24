@@ -1331,9 +1331,9 @@ pc用メディアend
     display: flex;
     margin-top: -27px;
     margin-left: 20px;
+    padding: 10px;
     cursor: pointer;
     position: relative;
-    z-index: 1000;
   }
 
   .drawer-open span,
